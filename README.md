@@ -59,3 +59,9 @@ const GOOGLE_SCRIPT_URL = 'PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
 ## 로고 아이콘형 수정
 - 상단과 하단 로고를 전체 로고 이미지 대신 아이콘만 사용하도록 변경했습니다.
 - 텍스트는 별도로 `KBRIDGE`로 표시했습니다.
+
+
+## 최종 연결 반영
+- 개인정보처리방침 링크: https://kbridges.co.kr/policy/private
+- Google Apps Script 웹 앱 URL: https://script.google.com/macros/s/AKfycbxitxJNBjDOLqFAkZ1GJsOUiN_dCnUvruYDXdCmUriCdo96DbuO01VOIC3OqoFntd4s/exec
+- `견적문의 접수하기` 버튼 클릭 시 위 Apps Script URL로 문의 내용이 전송됩니다.
