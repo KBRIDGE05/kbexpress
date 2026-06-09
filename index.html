@@ -57,11 +57,20 @@
     .footer-divider{height:1px;background:rgba(255,255,255,.16);margin:28px 0 22px}
     .footer-bottom{display:flex;justify-content:space-between;gap:20px;align-items:flex-end}
     .footer-company{font-size:12.8px;line-height:2;color:#b8cbd9}
-    .footer-company .policy-link{display:inline-block;margin-top:8px;color:#fff;font-weight:950}
+    .footer-company .policy-link{position:relative;z-index:20;cursor:pointer;pointer-events:auto;color:#fff;font-weight:950}
     .footer-copy{font-size:12.5px;color:#b8cbd9;white-space:nowrap}
     .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease, transform .6s ease}.reveal.show{opacity:1;transform:none}.delay1{transition-delay:.08s}.delay2{transition-delay:.16s}.delay3{transition-delay:.24s}
     .field textarea{height:62px;min-height:62px;resize:vertical}@media (max-width:1100px){.hero-inner{grid-template-columns:1fr}.express-visual{min-height:360px}.hero-plane-image{max-height:340px}.form-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}.mini-meta{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:860px){.brand-icon{width:34px;height:34px;flex-basis:34px}.logo-text{font-size:16px}.footer-brand .brand-icon{width:42px;height:42px;flex-basis:42px}.footer-brand .brand-copy{font-size:20px}.express-flow,.check-row{grid-template-columns:1fr}.express-panel{padding:20px}.panel-title{display:block}.panel-badge{display:inline-flex;margin-top:12px}.menu{display:none}.hamb{display:flex}.mobile-menu.open{display:block;padding:0 0 14px}.head,.compare,.cta{grid-template-columns:1fr;display:grid}.footer-top,.footer-bottom{grid-template-columns:1fr;display:grid}.footer-copy{white-space:normal}.card-grid,.process-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(34px,10vw,54px)}.mini-meta{grid-template-columns:1fr}.form-grid,.inline{grid-template-columns:1fr}.quote-head{flex-direction:column;align-items:flex-start}.wrap{width:min(100% - 28px,1180px)}}
+  
+    .success-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(3,18,31,.52);backdrop-filter:blur(8px)}
+    .success-modal.show{display:flex}
+    .success-box{width:min(420px,100%);border-radius:28px;background:#fff;border:1px solid #d9ebf4;box-shadow:0 30px 90px rgba(0,0,0,.22);padding:30px;text-align:center;color:#10273a}
+    .success-icon{width:58px;height:58px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#0b6ea8,#17bfd6);color:#fff;font-size:30px;font-weight:950}
+    .success-box h3{font-size:24px;line-height:1.25;letter-spacing:-.055em;margin:0}
+    .success-box p{margin-top:12px;color:#526b7f;font-size:14px;line-height:1.7}
+    .success-box .btn{margin-top:20px;min-width:132px}
+
   </style>
 </head>
 <body>
@@ -160,6 +169,16 @@
       </div>
     </section>
   </main>
+
+  <div class="success-modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+    <div class="success-box">
+      <div class="success-icon">✓</div>
+      <h3 id="successTitle">문의가 접수되었습니다.</h3>
+      <p>케이브릿지 담당자가 내용을 확인한 뒤 회신드리겠습니다.<br>긴급 건은 카카오톡 실시간 문의를 함께 이용해 주세요.</p>
+      <button type="button" class="btn primary" id="successCloseBtn">확인</button>
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="wrap">
       <div class="footer-top">
@@ -178,7 +197,7 @@
         <div class="footer-company">
           케이브릿지 주식회사 (KBRIDGE CO.,LTD) · 대표이사 김형진 · 사업자등록번호 548-88-02435<br>
           본사 : 부산광역시 동구 조방로17 5층 501호<br>
-          <a class="policy-link" href="https://kbridges.co.kr/policy/private" target="_blank" rel="noopener" target="_blank" rel="noopener">개인정보처리방침</a>
+          <a id="privacyPolicyLink" class="policy-link" href="https://kbridges.co.kr/policy/private" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
         </div>
         <div class="footer-copy">© 2026 KBRIDGE CO.,LTD. All rights reserved.</div>
       </div>
@@ -252,6 +271,22 @@
       target.style.color = isError ? '#c94d4d' : '#0b6ea8';
     }
 
+
+    function showSuccessPopup(){
+      const modal = el('successModal');
+      if(modal) modal.classList.add('show');
+    }
+
+    function closeSuccessPopup(){
+      const modal = el('successModal');
+      if(modal) modal.classList.remove('show');
+    }
+
+    el('successCloseBtn')?.addEventListener('click', closeSuccessPopup);
+    el('successModal')?.addEventListener('click', (event)=>{
+      if(event.target.id === 'successModal') closeSuccessPopup();
+    });
+
     el('quoteForm').addEventListener('submit', async (event)=>{
       event.preventDefault();
 
@@ -276,6 +311,7 @@
         });
 
         setStatus('견적 문의가 접수되었습니다. 담당자가 확인 후 회신드립니다.');
+        showSuccessPopup();
         submitBtn.textContent = '접수 완료';
         setTimeout(()=>{
           submitBtn.disabled = false;
@@ -312,6 +348,12 @@
       })
     },{threshold:.12});
     document.querySelectorAll('.reveal').forEach(node=>io.observe(node));
-  </script>
+  
+    const privacyPolicyLink = document.getElementById('privacyPolicyLink');
+    privacyPolicyLink?.addEventListener('click', function(event) {
+      event.preventDefault();
+      window.open('https://kbridges.co.kr/policy/private', '_blank', 'noopener,noreferrer');
+    });
+</script>
 </body>
 </html>

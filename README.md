@@ -65,3 +65,13 @@ const GOOGLE_SCRIPT_URL = 'PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
 - 개인정보처리방침 링크: https://kbridges.co.kr/policy/private
 - Google Apps Script 웹 앱 URL: https://script.google.com/macros/s/AKfycbxitxJNBjDOLqFAkZ1GJsOUiN_dCnUvruYDXdCmUriCdo96DbuO01VOIC3OqoFntd4s/exec
 - `견적문의 접수하기` 버튼 클릭 시 위 Apps Script URL로 문의 내용이 전송됩니다.
+
+
+## 개인정보처리방침 링크 수정
+- Footer의 개인정보처리방침 링크를 `https://kbridges.co.kr/policy/private`로 다시 연결했습니다.
+- 클릭이 막히는 경우를 방지하기 위해 JS 클릭 이벤트도 추가했습니다.
+
+
+## 문의 완료 팝업 추가
+- `견적문의 접수하기` 버튼 클릭 후 Apps Script 전송이 완료되면 `문의가 접수되었습니다` 팝업이 표시됩니다.
+- 팝업의 확인 버튼 또는 바깥 영역을 클릭하면 닫힙니다.
