@@ -1,0 +1,29 @@
+KBRIDGE 블로그 네비게이션 최종 수정본
+
+수정 내용
+1. 메인 index.html 상단 메뉴: 특송 블로그 -> 블로그
+2. 메인/블로그 페이지 좌측 로고 + KBRIDGE 클릭 시 /kbexpress/index.html 이동
+3. 블로그 목록/상세 페이지 메뉴 링크 수정
+   - 견적문의: /kbexpress/index.html#quote
+   - 운송 방식 선택: /kbexpress/index.html#compare
+   - 진행 절차: /kbexpress/index.html#process
+4. 블로그 헤더/푸터 로고는 HTML 내부에 포함된 이미지 데이터로 처리하여, assets 업로드 누락 시에도 보이도록 수정
+
+업로드해야 할 파일
+- /index.html
+- /blog/index.html
+- /blog/kbridge_express_blog_first_post.html
+
+선택 업로드
+- /assets/kbridge-icon.png
+- /assets/kbridge-logo-official.png
+- /blog/posts.json
+- /blog/posts-local.json
+- /blog/images/*
+
+업로드 후 확인
+- https://kbridge05.github.io/kbexpress/?v=navfix
+- https://kbridge05.github.io/kbexpress/blog/?v=navfix
+- https://kbridge05.github.io/kbexpress/blog/kbridge_express_blog_first_post.html?v=navfix
+
+브라우저 캐시가 남아 있으면 Ctrl+F5로 강력 새로고침하세요.
