@@ -1,0 +1,10 @@
+케이브릿지 해외특송 블로그 업로드 안내
+
+1. 이 폴더 전체를 GitHub Pages 저장소에 업로드합니다.
+2. 새 블로그 글을 추가할 때는 아래 3가지만 수정/추가하면 됩니다.
+   - blog/새글파일.html 추가
+   - blog/thumbs/새썸네일.webp 추가
+   - blog/posts.json에 글 정보 추가
+3. 메인 index.html은 blog/posts.json의 최신 3개 글을 자동으로 불러옵니다.
+4. blog/index.html은 blog/posts.json의 전체 글을 자동으로 불러옵니다.
+5. 이미지 파일은 WEBP 기준으로 정리했습니다.
