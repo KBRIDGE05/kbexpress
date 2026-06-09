@@ -80,17 +80,62 @@
     background:#eef8fc;
   }
 
-</style>
+
+
+/* ===== KBRIDGE shared header/footer for blog pages ===== */
+.kb-main-wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.kb-main-topbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(217,235,244,.9)}
+.kb-main-nav{height:72px;display:flex;align-items:center;gap:24px}
+.kb-main-logo{display:flex;align-items:center;gap:12px;color:#06253b;text-decoration:none}
+.kb-main-logo img{display:block;width:40px;height:40px;object-fit:contain;flex:0 0 40px}
+.kb-main-logo span{display:flex;align-items:center;font-size:18px;font-weight:950;letter-spacing:-.03em;color:#06253b}
+.kb-main-menu{display:flex;align-items:center;gap:24px;margin-left:auto;font-size:13px;font-weight:850;color:#2d4153}
+.kb-main-menu a{position:relative;padding:8px 0;white-space:nowrap;text-decoration:none;color:inherit}
+.kb-main-menu a:after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;border-radius:10px;background:linear-gradient(90deg,#0b6ea8,#17bfd6);transition:.2s}
+.kb-main-menu a:hover:after{width:100%}
+.kb-main-footer{padding:34px 0 16px;background:#041a2a;color:#a9c0d3}
+.kb-main-footer-top{display:grid;grid-template-columns:1.45fr .65fr;gap:48px;align-items:flex-start}
+.kb-main-footer-brand{display:flex;align-items:center;gap:14px;font-weight:950;color:#fff;margin-bottom:18px;text-decoration:none}
+.kb-main-footer-brand img{width:50px;height:50px;object-fit:contain;flex:0 0 50px}
+.kb-main-footer-brand span{display:flex;align-items:center;font-size:22px;font-weight:950;letter-spacing:-.03em;color:#fff}
+.kb-main-footer-desc{max-width:720px;font-size:14px;line-height:1.8;color:#d6e5ef;margin:0}
+.kb-main-footer-contact-title{font-size:13px;font-weight:950;color:#fff;margin-bottom:18px}
+.kb-main-footer-contact a{display:block;color:#d6edfa;font-size:13.5px;margin-top:12px;text-decoration:none}
+.kb-main-footer-divider{height:1px;background:rgba(255,255,255,.16);margin:28px 0 22px}
+.kb-main-footer-bottom{display:flex;justify-content:space-between;gap:20px;align-items:flex-end}
+.kb-main-footer-company{font-size:12.8px;line-height:2;color:#b8cbd9}
+.kb-main-footer-company a{color:#fff;font-weight:950;text-decoration:none}
+.kb-main-footer-copy{font-size:12.5px;color:#b8cbd9;white-space:nowrap}
+@media (max-width:860px){
+  .kb-main-wrap{width:min(100% - 28px,1180px)}
+  .kb-main-nav{height:auto;min-height:68px;padding:12px 0;align-items:flex-start;flex-direction:column;gap:8px}
+  .kb-main-logo img{width:34px;height:34px;flex-basis:34px}
+  .kb-main-logo span{font-size:16px}
+  .kb-main-menu{margin-left:0;gap:14px;flex-wrap:wrap;font-size:12.5px}
+  .kb-main-footer-top,.kb-main-footer-bottom{grid-template-columns:1fr;display:grid}
+  .kb-main-footer-copy{white-space:normal}
+  .kb-main-footer-brand img{width:42px;height:42px;flex-basis:42px}
+  .kb-main-footer-brand span{font-size:20px}
+}
+
+  </style>
 </head>
 <body>
-  <header class="header">
-    <div class="container nav">
-      <a href="../index.html" class="brand"><span class="brand-badge">K</span><span>KBRIDGE</span></a>
-      <nav class="nav-links">
-        <a href="../index.html">해외특송 메인</a>
-        <a href="index.html">블로그</a>
-        <a href="../index.html#quote">견적문의</a>
-        <a href="https://pf.kakao.com/_baLgb/chat" target="_blank" rel="noopener">실시간 문의</a>
+  <header class="kb-main-topbar" id="top">
+    <div class="kb-main-wrap">
+      <nav class="kb-main-nav" aria-label="케이브릿지 상단 메뉴">
+        <a class="kb-main-logo" href="/kbexpress/index.html" aria-label="KBRIDGE 해외특송 메인">
+          <img src="/kbexpress/assets/kbridge-icon.png" alt="KBRIDGE 아이콘">
+          <span>KBRIDGE</span>
+        </a>
+        <div class="kb-main-menu">
+          <a href="/kbexpress/index.html">해외특송 메인</a>
+          <a href="../blog/index.html">블로그</a>
+          <a href="/kbexpress//kbexpress/index.html#quote">견적문의</a>
+          <a href="/kbexpress//kbexpress/index.html#carrier">운송 방식 선택</a>
+          <a href="/kbexpress//kbexpress/index.html#process">진행 절차</a>
+          <a href="https://pf.kakao.com/_baLgb/chat" target="_blank" rel="noopener">실시간 문의</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -112,25 +157,31 @@
       </article>
     </div>
   </section>
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
+  <footer class="kb-main-footer">
+    <div class="kb-main-wrap">
+      <div class="kb-main-footer-top">
         <div>
-          <div class="brand"><span class="brand-badge">K</span><span>KBRIDGE</span></div>
-          <div class="footer-desc">케이브릿지가 운영하는 해외특송 서비스</div>
+          <a class="kb-main-footer-brand" href="/kbexpress/index.html">
+            <img src="/kbexpress/assets/kbridge-icon.png" alt="KBRIDGE 아이콘">
+            <span>KBRIDGE</span>
+          </a>
+          <p class="kb-main-footer-desc">케이브릿지가 운영하는 해외특송 서비스</p>
         </div>
-        <div class="contact">
-          <strong>문의</strong>
+        <div class="kb-main-footer-contact">
+          <div class="kb-main-footer-contact-title">문의</div>
           <a href="https://pf.kakao.com/_baLgb/chat" target="_blank" rel="noopener">실시간 문의</a>
           <a href="mailto:all@kbridges.co.kr">all@kbridges.co.kr</a>
         </div>
       </div>
-      <div class="footer-company">
-        케이브릿지 주식회사 (KBRIDGE CO.,LTD) · 대표이사 김형진 · 사업자등록번호 548-88-02435<br>
-        본사 : 부산광역시 동구 조방로17 5층 501호<br>
-        <a href="https://kbridges.co.kr/policy/private" target="_blank" rel="noopener" style="color:#fff;font-weight:950">개인정보처리방침</a>
+      <div class="kb-main-footer-divider"></div>
+      <div class="kb-main-footer-bottom">
+        <div class="kb-main-footer-company">
+          케이브릿지 주식회사 (KBRIDGE CO.,LTD) · 대표이사 김형진 · 사업자등록번호 548-88-02435<br>
+          본사 : 부산광역시 동구 조방로17 5층 501호<br>
+          <a href="https://kbridges.co.kr/policy/private" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
+        </div>
+        <div class="kb-main-footer-copy">© 2026 KBRIDGE CO.,LTD. All rights reserved.</div>
       </div>
-      <div class="footer-copy">© 2026 KBRIDGE CO.,LTD. All rights reserved.</div>
     </div>
   </footer>
 
@@ -170,8 +221,8 @@
       }
 
       try{
-        const response = await fetch('posts.json', {cache:'no-store'});
-        if(!response.ok) throw new Error('posts.json load failed');
+        const response = await fetch('/kbexpress/blog/posts.json', {cache:'no-store'});
+        if(!response.ok) throw new Error('/kbexpress/blog/posts.json load failed');
         render(await response.json());
       }catch(error){
         grid.innerHTML = '<article class="card"><div class="card-body"><h3 class="title">블로그 글을 불러오지 못했습니다.</h3><p class="excerpt">GitHub Pages에 업로드 후 다시 확인해 주세요.</p></div></article>';

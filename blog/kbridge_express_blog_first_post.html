@@ -8,7 +8,7 @@
   <meta name="keywords" content="해외특송, 국제특송, 해외배송, DHL특송, FedEx특송, UPS특송, EMS특송, 수출샘플발송, 인보이스작성, 해외통관, 케이브릿지">
   <meta property="og:title" content="해외특송, 보내기 전에 꼭 확인해야 할 것 | 케이브릿지">
   <meta property="og:description" content="국제배송·통관·인보이스·배송가이드까지 해외특송 발송 전 확인해야 할 실무 포인트를 정리했습니다.">
-  <meta property="og:image" content="images/thumbnail-express-logistics.webp">
+  <meta property="og:image" content="/kbexpress/blog/images/thumbnail-express-logistics.webp">
   <meta name="twitter:card" content="summary_large_image">
   <style>
     :root {
@@ -385,7 +385,121 @@
       color: #1e3a8a;
     }
 
+
+
+    .kb-site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid #e2e8f0;
+      backdrop-filter: blur(10px);
+    }
+
+    .kb-site-header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .kb-site-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .kb-site-brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0ea5e9, #1d4ed8);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .kb-site-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .kb-site-nav a,
+    .kb-back-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      color: #1e3a8a;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .kb-site-nav a:hover,
+    .kb-back-btn:hover {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+    }
+
+    .kb-bottom-nav {
+      margin-top: 30px;
+      padding: 18px;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .kb-bottom-nav-title {
+      margin: 0;
+      color: #0f172a;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
     @media (max-width: 640px) {
+
+      .kb-site-header-inner {
+        padding: 10px 12px;
+        align-items: flex-start;
+      }
+
+      .kb-site-nav {
+        gap: 6px;
+      }
+
+      .kb-site-nav a,
+      .kb-back-btn {
+        min-height: 31px;
+        padding: 7px 9px;
+        font-size: 12px;
+      }
+
       .kb-blog-wrap {
         margin: 12px auto 30px;
         padding: 22px 14px 30px;
@@ -475,10 +589,96 @@
         min-width: 140px;
       }
     }
+  
+
+/* ===== KBRIDGE shared header/footer for blog pages ===== */
+.kb-main-wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.kb-main-topbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(217,235,244,.9)}
+.kb-main-nav{height:72px;display:flex;align-items:center;gap:24px}
+.kb-main-logo{display:flex;align-items:center;gap:12px;color:#06253b;text-decoration:none}
+.kb-main-logo img{display:block;width:40px;height:40px;object-fit:contain;flex:0 0 40px}
+.kb-main-logo span{display:flex;align-items:center;font-size:18px;font-weight:950;letter-spacing:-.03em;color:#06253b}
+.kb-main-menu{display:flex;align-items:center;gap:24px;margin-left:auto;font-size:13px;font-weight:850;color:#2d4153}
+.kb-main-menu a{position:relative;padding:8px 0;white-space:nowrap;text-decoration:none;color:inherit}
+.kb-main-menu a:after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;border-radius:10px;background:linear-gradient(90deg,#0b6ea8,#17bfd6);transition:.2s}
+.kb-main-menu a:hover:after{width:100%}
+.kb-main-footer{padding:34px 0 16px;background:#041a2a;color:#a9c0d3}
+.kb-main-footer-top{display:grid;grid-template-columns:1.45fr .65fr;gap:48px;align-items:flex-start}
+.kb-main-footer-brand{display:flex;align-items:center;gap:14px;font-weight:950;color:#fff;margin-bottom:18px;text-decoration:none}
+.kb-main-footer-brand img{width:50px;height:50px;object-fit:contain;flex:0 0 50px}
+.kb-main-footer-brand span{display:flex;align-items:center;font-size:22px;font-weight:950;letter-spacing:-.03em;color:#fff}
+.kb-main-footer-desc{max-width:720px;font-size:14px;line-height:1.8;color:#d6e5ef;margin:0}
+.kb-main-footer-contact-title{font-size:13px;font-weight:950;color:#fff;margin-bottom:18px}
+.kb-main-footer-contact a{display:block;color:#d6edfa;font-size:13.5px;margin-top:12px;text-decoration:none}
+.kb-main-footer-divider{height:1px;background:rgba(255,255,255,.16);margin:28px 0 22px}
+.kb-main-footer-bottom{display:flex;justify-content:space-between;gap:20px;align-items:flex-end}
+.kb-main-footer-company{font-size:12.8px;line-height:2;color:#b8cbd9}
+.kb-main-footer-company a{color:#fff;font-weight:950;text-decoration:none}
+.kb-main-footer-copy{font-size:12.5px;color:#b8cbd9;white-space:nowrap}
+@media (max-width:860px){
+  .kb-main-wrap{width:min(100% - 28px,1180px)}
+  .kb-main-nav{height:auto;min-height:68px;padding:12px 0;align-items:flex-start;flex-direction:column;gap:8px}
+  .kb-main-logo img{width:34px;height:34px;flex-basis:34px}
+  .kb-main-logo span{font-size:16px}
+  .kb-main-menu{margin-left:0;gap:14px;flex-wrap:wrap;font-size:12.5px}
+  .kb-main-footer-top,.kb-main-footer-bottom{grid-template-columns:1fr;display:grid}
+  .kb-main-footer-copy{white-space:normal}
+  .kb-main-footer-brand img{width:42px;height:42px;flex-basis:42px}
+  .kb-main-footer-brand span{font-size:20px}
+}
+
+  
+
+/* ===== KBRIDGE BLOG HEADER/FOOTER FINAL v20260609 ===== */
+.kb-main-wrap{width:min(1180px,calc(100% - 40px)) !important;margin:0 auto !important}
+.kb-main-topbar{display:block !important;position:sticky !important;top:0 !important;z-index:9999 !important;background:rgba(255,255,255,.96) !important;backdrop-filter:blur(18px) !important;border-bottom:1px solid #d9ebf4 !important;box-shadow:0 6px 22px rgba(6,37,59,.05) !important}
+.kb-main-nav{height:72px !important;display:flex !important;align-items:center !important;gap:24px !important}
+.kb-main-logo{display:flex !important;align-items:center !important;gap:10px !important;text-decoration:none !important;color:#06253b !important;font-weight:950 !important}
+.kb-main-logo img{display:block !important;width:34px !important;height:34px !important;object-fit:contain !important;flex:0 0 34px !important}
+.kb-main-logo span{font-size:18px !important;font-weight:950 !important;letter-spacing:-.04em !important;color:#06253b !important;line-height:1 !important}
+.kb-main-menu{display:flex !important;align-items:center !important;gap:24px !important;margin-left:auto !important;font-size:13px !important;font-weight:850 !important;color:#2d4153 !important}
+.kb-main-menu a{display:inline-block !important;position:relative !important;padding:8px 0 !important;white-space:nowrap !important;text-decoration:none !important;color:#2d4153 !important;line-height:1.2 !important}
+.kb-main-menu a:hover{color:#0b6ea8 !important}
+.kb-main-footer{display:block !important;margin-top:56px !important;padding:34px 0 16px !important;background:#041a2a !important;color:#a9c0d3 !important}
+.kb-main-footer-top{display:grid !important;grid-template-columns:1.45fr .65fr !important;gap:48px !important;align-items:flex-start !important}
+.kb-main-footer-brand{display:flex !important;align-items:center !important;gap:12px !important;font-weight:950 !important;color:#fff !important;margin-bottom:18px !important;text-decoration:none !important}
+.kb-main-footer-brand img{display:block !important;width:38px !important;height:38px !important;object-fit:contain !important;flex:0 0 38px !important}
+.kb-main-footer-brand span{font-size:22px !important;font-weight:950 !important;letter-spacing:-.04em !important;color:#fff !important;line-height:1 !important}
+.kb-main-footer-desc{max-width:720px !important;font-size:14px !important;line-height:1.8 !important;color:#d6e5ef !important;margin:0 !important}
+.kb-main-footer-contact-title{font-size:13px !important;font-weight:950 !important;color:#fff !important;margin-bottom:18px !important}
+.kb-main-footer-contact a{display:block !important;color:#d6edfa !important;font-size:13.5px !important;margin-top:12px !important;text-decoration:none !important}
+.kb-main-footer-divider{height:1px !important;background:rgba(255,255,255,.16) !important;margin:28px 0 22px !important}
+.kb-main-footer-bottom{display:flex !important;justify-content:space-between !important;gap:20px !important;align-items:flex-end !important}
+.kb-main-footer-company{font-size:12.8px !important;line-height:2 !important;color:#b8cbd9 !important}
+.kb-main-footer-company a{color:#fff !important;font-weight:950 !important;text-decoration:none !important}
+.kb-main-footer-copy{font-size:12.5px !important;color:#b8cbd9 !important;white-space:nowrap !important}
+@media(max-width:860px){.kb-main-wrap{width:min(100% - 28px,1180px) !important}.kb-main-nav{height:auto !important;min-height:68px !important;padding:12px 0 !important;align-items:flex-start !important;flex-direction:column !important;gap:8px !important}.kb-main-menu{margin-left:0 !important;gap:14px !important;flex-wrap:wrap !important;font-size:12.5px !important}.kb-main-footer-top,.kb-main-footer-bottom{grid-template-columns:1fr !important;display:grid !important}.kb-main-footer-copy{white-space:normal !important}}
+
   </style>
 </head>
 <body>
-  <article class="kb-blog-wrap">
+
+  <!-- KBRIDGE BLOG HEADER FINAL v20260609_logo_footer_synced -->
+  <header class="kb-main-topbar" id="top">
+    <div class="kb-main-wrap">
+      <nav class="kb-main-nav" aria-label="케이브릿지 상단 메뉴">
+        <a class="kb-main-logo" href="/kbexpress/index.html" aria-label="KBRIDGE 해외특송 메인">
+          <img src="/kbexpress/assets/kbridge-icon.png" alt="KBRIDGE 로고">
+          <span>KBRIDGE</span>
+        </a>
+        <div class="kb-main-menu">
+          <a href="/kbexpress/index.html">해외특송 메인</a>
+          <a href="/kbexpress/blog/index.html">블로그</a>
+          <a href="/kbexpress/index.html#quote">견적문의</a>
+          <a href="/kbexpress/index.html#carrier">운송 방식 선택</a>
+          <a href="/kbexpress/index.html#process">진행 절차</a>
+          <a href="https://pf.kakao.com/_baLgb/chat" target="_blank" rel="noopener">실시간 문의</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<article class="kb-blog-wrap">
 
     <section class="kb-hero">
       <span class="kb-label">K-BRIDGE 해외특송 서비스</span>
@@ -491,7 +691,7 @@
 
 
     <figure class="kb-img-figure">
-      <img src="images/thumbnail-express-logistics.webp" alt="케이브릿지 해외특송 물류정보 썸네일 - 국제배송, 통관, 인보이스, 배송가이드">
+      <img src="/kbexpress/blog/images/thumbnail-express-logistics.webp" alt="케이브릿지 해외특송 물류정보 썸네일 - 국제배송, 통관, 인보이스, 배송가이드">
     </figure>
 
     <section class="kb-summary">
@@ -516,7 +716,7 @@
     <section class="kb-visual-block">
       <h2 class="kb-visual-title">비주얼 카드 | 해외특송 발송 전 핵심 체크 4가지</h2>
       <figure class="kb-img-figure">
-        <img src="images/visual-card-express-check-4.webp" alt="해외특송 발송 전 핵심 체크 4가지 - 품목 확인, 인보이스 작성, 수취인 정보, 관부가세와 통관 대응">
+        <img src="/kbexpress/blog/images/visual-card-express-check-4.webp" alt="해외특송 발송 전 핵심 체크 4가지 - 품목 확인, 인보이스 작성, 수취인 정보, 관부가세와 통관 대응">
         <figcaption>발송 전에는 품목 제한, 인보이스, 수취인 정보, 관부가세 부담 여부를 먼저 확인해야 합니다.</figcaption>
       </figure>
     </section>
@@ -608,7 +808,7 @@
     <section class="kb-visual-block">
       <h2 class="kb-visual-title">비주얼 카드 | 인보이스 작성 핵심 항목</h2>
       <figure class="kb-img-figure">
-        <img src="images/visual-card-invoice-check.webp" alt="인보이스 작성 핵심 항목 - 발송인 수취인 정보, 구체적인 품명, 수량 단가 총액, 원산지 용도 HS CODE">
+        <img src="/kbexpress/blog/images/visual-card-invoice-check.webp" alt="인보이스 작성 핵심 항목 - 발송인 수취인 정보, 구체적인 품명, 수량 단가 총액, 원산지 용도 HS CODE">
         <figcaption>인보이스에는 발송인·수취인 정보, 구체적인 품명, 수량·단가·총액, 원산지·용도·HS CODE를 빠짐없이 기재하는 것이 좋습니다.</figcaption>
       </figure>
     </section>
@@ -692,7 +892,7 @@
     <section class="kb-visual-block">
       <h2 class="kb-visual-title">비주얼 카드 | 통관 지연이 생기는 대표 이유</h2>
       <figure class="kb-img-figure">
-        <img src="images/visual-card-customs-delay.webp" alt="통관 지연이 생기는 대표 이유 - 품명 불명확, 가격 과소기재, 수취인 정보 부족, 규제 품목">
+        <img src="/kbexpress/blog/images/visual-card-customs-delay.webp" alt="통관 지연이 생기는 대표 이유 - 품명 불명확, 가격 과소기재, 수취인 정보 부족, 규제 품목">
         <figcaption>품명 불명확, 가격 과소기재, 수취인 정보 부족, 규제 품목 여부는 통관 지연으로 이어질 수 있어 사전 점검이 필요합니다.</figcaption>
       </figure>
     </section>
@@ -779,8 +979,7 @@
         고객이 놓치기 쉬운 통관 리스크를 먼저 확인하고, 물품의 성격에 맞는 발송 방법을 제안하는 것이 핵심입니다.
       </p>
     </section>
-
-    <section class="kb-tags">
+<section class="kb-tags">
       <strong>추천 태그</strong><br>
       <span>#해외특송</span>
       <span>#국제특송</span>
@@ -800,5 +999,35 @@
     </section>
 
   </article>
+
+  <!-- KBRIDGE BLOG FOOTER FINAL v20260609_logo_footer_synced -->
+  <footer class="kb-main-footer">
+    <div class="kb-main-wrap">
+      <div class="kb-main-footer-top">
+        <div>
+          <a class="kb-main-footer-brand" href="/kbexpress/index.html" aria-label="KBRIDGE 해외특송 메인">
+            <img src="/kbexpress/assets/kbridge-icon.png" alt="KBRIDGE 로고">
+            <span>KBRIDGE</span>
+          </a>
+          <p class="kb-main-footer-desc">케이브릿지가 운영하는 해외특송 서비스</p>
+        </div>
+        <div class="kb-main-footer-contact">
+          <div class="kb-main-footer-contact-title">문의</div>
+          <a href="https://pf.kakao.com/_baLgb/chat" target="_blank" rel="noopener">실시간 문의</a>
+          <a href="mailto:all@kbridges.co.kr">all@kbridges.co.kr</a>
+        </div>
+      </div>
+      <div class="kb-main-footer-divider"></div>
+      <div class="kb-main-footer-bottom">
+        <div class="kb-main-footer-company">
+          케이브릿지 주식회사 (KBRIDGE CO.,LTD) · 대표이사 김형진 · 사업자등록번호 548-88-02435<br>
+          본사 : 부산광역시 동구 조방로17 5층 501호<br>
+          <a href="https://kbridges.co.kr/policy/private" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
+        </div>
+        <div class="kb-main-footer-copy">© 2026 KBRIDGE CO.,LTD. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
