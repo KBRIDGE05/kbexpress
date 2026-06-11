@@ -403,7 +403,7 @@
 
     .kb-brand-logo {
       display: block;
-      width: 142px;
+      width: 116px;
       height: auto;
       object-fit: contain;
     }
@@ -427,7 +427,7 @@
     @media (max-width: 720px) {
       .kb-header-inner { padding: 10px 14px; align-items: flex-start; flex-direction: column; gap: 8px; }
       .kb-nav { width: 100%; overflow-x: auto; gap: 14px; padding-bottom: 4px; font-size: 12.5px; }
-      .kb-brand-logo { width: 118px; }
+      .kb-brand-logo { width: 98px; }
       .kb-image-block { margin: 18px 0 22px; }
       .kb-image-block img { border-radius: 14px; }
       .kb-blog-wrap { margin: 14px auto 32px; padding: 20px 14px 28px; border-radius: 0; }
@@ -444,105 +444,23 @@
     }
   </style>
 
-<style id="kbridge-clean-header-style">
-  :root {
-    --kb-navy: #06263d;
-    --kb-blue: #0ea5c8;
-    --kb-line: #e5edf5;
-  }
-  .site-header {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.97);
-    border-bottom: 1px solid var(--kb-line);
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    backdrop-filter: blur(10px);
-  }
-  .site-header__inner {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 10px 22px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-  }
-  .site-logo {
-    display: inline-flex;
-    align-items: center;
-    flex: 0 0 auto;
-    text-decoration: none;
-  }
-  .site-logo img {
-    display: block;
-    width: 132px;
-    height: auto;
-    object-fit: contain;
-  }
-  .site-nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 20px;
-    font-size: 13px;
-    font-weight: 700;
-    white-space: nowrap;
-  }
-  .site-nav a {
-    color: var(--kb-navy);
-    text-decoration: none;
-  }
-  .site-nav a:hover {
-    color: var(--kb-blue);
-  }
-  @media (max-width: 768px) {
-    .site-header__inner {
-      padding: 9px 14px;
-      justify-content: center;
-    }
-    .site-logo img {
-      width: 112px;
-    }
-    .site-nav {
-      display: none;
-    }
-  }
-</style>
-
-<style id="kbridge-mobile-optimize">
-  img { max-width: 100%; height: auto; }
-  table { max-width: 100%; }
-  @media (max-width: 768px) {
-    body { overflow-x: hidden; }
-    .blog-card, .post-card, .kb-card, .card { max-width: 100%; }
-    .blog-grid, .posts-grid, .kb-card-grid { grid-template-columns: 1fr !important; }
-    table { display: block; overflow-x: auto; white-space: nowrap; }
+<style id="kb-duty-logo-mobile-fix">
+  .kb-brand img{width:138px!important;height:auto!important;display:block;}
+  @media(max-width:760px){
+    .kb-header-inner{justify-content:center!important;}
+    .kb-brand img{width:116px!important;}
+    .kb-nav{display:none!important;}
+    .kb-card-grid,.kb-visual-grid{grid-template-columns:1fr!important;}
+    table{display:block;overflow-x:auto;white-space:nowrap;}
+    img{max-width:100%;height:auto;}
   }
 </style>
 </head>
 <body>
-<header class="site-header">
-<div class="site-header__inner">
-<a aria-label="KBridge 메인으로 이동" class="site-logo" href="../index.html">
-<img alt="KBridge 케이브릿지 주식회사" src="images/kbridge-logo-official.png"/>
-</a>
-<nav aria-label="주요 메뉴" class="site-nav">
-<a href="../index.html#quote">견적문의</a>
-<a href="../index.html#before-quote">체크리스트</a>
-<a href="../index.html#mode-selection">운송 방식 선택</a>
-<a href="index.html">블로그</a>
-<a href="../index.html#process">진행 절차</a>
-</nav>
-</div>
-</header>
-
 <!-- KBRIDGE DUTY CALCULATOR BLOG FINAL v20260611_visual_webp -->
 <header class="kb-header">
 <div class="kb-header-inner">
-<a aria-label="케이브릿지 해외특송 메인으로 이동" class="kb-brand" href="../index.html">
-<img alt="KBRIDGE" class="kb-brand-logo" src="images/kbridge-logo-official.png"/>
-</a>
+<a aria-label="케이브릿지 해외특송 메인으로 이동" class="kb-brand" href="../index.html"><img alt="KBridge 케이브릿지 주식회사" src="images/kbridge-logo-official.png" style="width:138px;height:auto;display:block;"/></a>
 <nav aria-label="주요 메뉴" class="kb-nav">
 <a href="../index.html">해외특송 메인</a>
 <a href="index.html">블로그</a>
