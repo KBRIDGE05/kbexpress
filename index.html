@@ -383,47 +383,81 @@ img{max-width:100%;height:auto}
   box-shadow:0 18px 42px rgba(16,39,58,.18);
 }
 
-    /* ===== Floating Top Button ===== */
-    .top-btn{
+    /* ===== Floating Contact / Top Buttons ===== */
+    .floating-actions{
       position:fixed;
       right:22px;
       bottom:22px;
       z-index:9900;
-      width:54px;
-      height:54px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      align-items:flex-end;
+    }
+    .float-contact,
+    .top-btn{
+      min-width:118px;
+      height:46px;
       border:0;
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:7px;
+      color:#fff;
+      font-size:13px;
+      font-weight:950;
+      letter-spacing:-.035em;
+      box-shadow:0 16px 38px rgba(9,61,96,.22);
+      cursor:pointer;
+      transition:transform .22s ease, box-shadow .22s ease, opacity .22s ease, visibility .22s ease;
+    }
+    .float-contact:hover,
+    .top-btn:hover{
+      transform:translateY(-4px);
+      box-shadow:0 22px 48px rgba(9,61,96,.30);
+    }
+    .float-contact.email{
+      background:linear-gradient(135deg,#10273a,#0b6ea8);
+    }
+    .float-contact.kakao{
+      background:linear-gradient(135deg,#f9df32,#ffd84d);
+      color:#2c2612;
+    }
+    .top-btn{
+      width:54px;
+      min-width:54px;
+      height:54px;
       border-radius:50%;
       background:linear-gradient(135deg,var(--brand),var(--brand2));
-      color:#fff;
       font-size:12px;
-      font-weight:950;
-      letter-spacing:-.02em;
-      box-shadow:0 16px 38px rgba(9,61,96,.24);
-      cursor:pointer;
       opacity:0;
       visibility:hidden;
       transform:translateY(12px);
-      transition:opacity .22s ease, visibility .22s ease, transform .22s ease, box-shadow .22s ease;
     }
     .top-btn.show{
       opacity:1;
       visibility:visible;
       transform:translateY(0);
     }
-    .top-btn:hover{
-      transform:translateY(-4px);
-      box-shadow:0 22px 48px rgba(9,61,96,.30);
-    }
+    .float-contact:focus-visible,
     .top-btn:focus-visible{
       outline:3px solid rgba(23,191,214,.35);
       outline-offset:4px;
     }
     @media(max-width:760px){
+      .floating-actions{
+        right:14px;
+        bottom:14px;
+        gap:8px;
+      }
+      .float-contact{
+        display:none !important;
+      }
       .top-btn{
-        right:16px;
-        bottom:16px;
-        width:48px;
-        height:48px;
+        width:46px;
+        min-width:46px;
+        height:46px;
         font-size:11px;
       }
     }
@@ -525,7 +559,7 @@ img{max-width:100%;height:auto}
           <p>해외특송, 통관, 인보이스, 운임 계산, 실제 문의 사례 등<br>케이브릿지 해외특송과 관련된 글을 계속 업데이트합니다.</p>
         </div>
         <div class="blog-actions">
-          <a href="blog/index.html" class="blog-filter">블로그 전체보기</a>
+          <a href="/blog/kbridge_express_blog_first_post.html" class="blog-filter">블로그 글 보기</a>
         </div>
       </div>
 
@@ -568,7 +602,11 @@ img{max-width:100%;height:auto}
     </div>
   </div>
 
-  <button type="button" class="top-btn" id="topBtn" aria-label="페이지 맨 위로 이동">Top</button>
+  <div class="floating-actions" aria-label="빠른 문의 및 상단 이동">
+    <a class="float-contact email" href="mailto:all@kbridges.co.kr" aria-label="이메일 문의하기">✉ 이메일 문의</a>
+    <a class="float-contact kakao" href="https://pf.kakao.com/_baLgb/chat" target="_blank" rel="noopener" aria-label="카카오톡 문의하기">💬 카카오톡 문의</a>
+    <button type="button" class="top-btn" id="topBtn" aria-label="페이지 맨 위로 이동">Top</button>
+  </div>
 
   <footer class="footer">
     <div class="wrap">
@@ -611,8 +649,8 @@ img{max-width:100%;height:auto}
           {
                     "title": "해외특송, 보내기 전에 꼭 확인해야 할 것",
                     "excerpt": "품목 가능 여부, 인보이스 작성, 수취인 정보, 관부가세와 통관 지연까지 해외특송 발송 전 확인해야 할 실무 포인트를 정리했습니다.",
-                    "url": "blog/kbridge_express_blog_first_post.html",
-                    "thumbnail": "blog/images/thumbnail-express-logistics.webp",
+                    "url": "/blog/kbridge_express_blog_first_post.html",
+                    "thumbnail": "/blog/images/thumbnail-express-logistics.webp",
                     "date": "2026.06.09",
                     "category": "해외특송 정보",
                     "alt": "케이브릿지 해외특송 물류정보 썸네일"
@@ -631,23 +669,27 @@ img{max-width:100%;height:auto}
           grid.innerHTML = '<article class="blog-card"><div class="blog-body"><h3 class="blog-title">등록된 블로그 글이 없습니다.</h3></div></article>';
           return;
         }
-        grid.innerHTML = latest.map(post => `
+        grid.innerHTML = latest.map(post => {
+          const postUrl = post.url && post.url.startsWith('/') ? post.url : '/' + String(post.url || '').replace(/^\/+/, '');
+          const thumbUrl = post.thumbnail && post.thumbnail.startsWith('/') ? post.thumbnail : '/' + String(post.thumbnail || '').replace(/^\/+/, '');
+          return `
           <article class="blog-card">
-            <a class="blog-thumb" href="${escapeHtml(post.url)}" aria-label="${escapeHtml(post.title)}">
-              <img src="${escapeHtml(post.thumbnail)}" alt="${escapeHtml(post.alt || post.title)}" loading="lazy">
+            <a class="blog-thumb" href="${escapeHtml(postUrl)}" aria-label="${escapeHtml(post.title)}">
+              <img src="${escapeHtml(thumbUrl)}" alt="${escapeHtml(post.alt || post.title)}" loading="lazy">
             </a>
             <div class="blog-body">
               <div class="blog-meta">${escapeHtml(post.date)} · ${escapeHtml(post.category || '해외특송 정보')}</div>
               <h3 class="blog-title">${escapeHtml(post.title)}</h3>
               <p class="blog-excerpt">${escapeHtml(post.excerpt)}</p>
-              <a class="blog-read" href="${escapeHtml(post.url)}">자세히 보기</a>
+              <a class="blog-read" href="${escapeHtml(postUrl)}">자세히 보기</a>
             </div>
           </article>
-        `).join('');
+        `;
+        }).join('');
       }
 
       try{
-        const response = await fetch('blog/posts.json', {cache:'no-store'});
+        const response = await fetch('/blog/posts.json', {cache:'no-store'});
         if(!response.ok) throw new Error('posts.json load failed');
         render(await response.json());
       }catch(error){
