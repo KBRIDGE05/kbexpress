@@ -403,7 +403,7 @@
 
     .kb-brand-logo {
       display: block;
-      width: 116px;
+      width: 142px;
       height: auto;
       object-fit: contain;
     }
@@ -427,7 +427,7 @@
     @media (max-width: 720px) {
       .kb-header-inner { padding: 10px 14px; align-items: flex-start; flex-direction: column; gap: 8px; }
       .kb-nav { width: 100%; overflow-x: auto; gap: 14px; padding-bottom: 4px; font-size: 12.5px; }
-      .kb-brand-logo { width: 98px; }
+      .kb-brand-logo { width: 118px; }
       .kb-image-block { margin: 18px 0 22px; }
       .kb-image-block img { border-radius: 14px; }
       .kb-blog-wrap { margin: 14px auto 32px; padding: 20px 14px 28px; border-radius: 0; }
@@ -444,11 +444,16 @@
     }
   </style>
 
-<style id="kbridge-header-logo-fix">
+<style id="kbridge-clean-header-style">
+  :root {
+    --kb-navy: #06263d;
+    --kb-blue: #0ea5c8;
+    --kb-line: #e5edf5;
+  }
   .site-header {
     width: 100%;
-    background: rgba(255,255,255,.96);
-    border-bottom: 1px solid #e5edf5;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--kb-line);
     position: sticky;
     top: 0;
     z-index: 9999;
@@ -457,7 +462,7 @@
   .site-header__inner {
     max-width: 1180px;
     margin: 0 auto;
-    padding: 12px 22px;
+    padding: 10px 22px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -466,12 +471,12 @@
   .site-logo {
     display: inline-flex;
     align-items: center;
-    text-decoration: none;
     flex: 0 0 auto;
+    text-decoration: none;
   }
   .site-logo img {
     display: block;
-    width: 142px;
+    width: 132px;
     height: auto;
     object-fit: contain;
   }
@@ -479,32 +484,40 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 22px;
-    font-size: 14px;
+    gap: 20px;
+    font-size: 13px;
     font-weight: 700;
     white-space: nowrap;
   }
   .site-nav a {
-    color: #0f2742;
+    color: var(--kb-navy);
     text-decoration: none;
   }
   .site-nav a:hover {
-    color: #0891b2;
+    color: var(--kb-blue);
   }
-  @media (max-width: 760px) {
+  @media (max-width: 768px) {
     .site-header__inner {
-      padding: 10px 16px;
+      padding: 9px 14px;
       justify-content: center;
     }
     .site-logo img {
-      width: 118px;
+      width: 112px;
     }
     .site-nav {
       display: none;
     }
   }
-  body {
-    padding-top: 0 !important;
+</style>
+
+<style id="kbridge-mobile-optimize">
+  img { max-width: 100%; height: auto; }
+  table { max-width: 100%; }
+  @media (max-width: 768px) {
+    body { overflow-x: hidden; }
+    .blog-card, .post-card, .kb-card, .card { max-width: 100%; }
+    .blog-grid, .posts-grid, .kb-card-grid { grid-template-columns: 1fr !important; }
+    table { display: block; overflow-x: auto; white-space: nowrap; }
   }
 </style>
 </head>
@@ -528,7 +541,7 @@
 <header class="kb-header">
 <div class="kb-header-inner">
 <a aria-label="케이브릿지 해외특송 메인으로 이동" class="kb-brand" href="../index.html">
-<img alt="KBRIDGE" class="kb-brand-logo" src="../assets/kbridge-logo-official.png"/>
+<img alt="KBRIDGE" class="kb-brand-logo" src="images/kbridge-logo-official.png"/>
 </a>
 <nav aria-label="주요 메뉴" class="kb-nav">
 <a href="../index.html">해외특송 메인</a>

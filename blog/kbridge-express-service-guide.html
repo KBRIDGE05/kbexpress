@@ -450,12 +450,25 @@
       }
     }
   </style>
+<style id="kb-detail-header-fix">
+.kb-header{position:sticky;top:0;z-index:999;background:rgba(255,255,255,.96);border-bottom:1px solid #e5eef6;backdrop-filter:blur(12px)}
+.kb-header-inner{max-width:1120px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.kb-brand{display:inline-flex;align-items:center;text-decoration:none;white-space:nowrap}.kb-brand-logo{display:block;width:142px;height:auto;object-fit:contain}
+.kb-nav{display:flex;align-items:center;gap:18px;font-size:13px;font-weight:800;color:#0f2544;white-space:nowrap}.kb-nav a{text-decoration:none;color:inherit}.kb-nav a:hover{color:#0b78d0}
+.kb-footer{margin-top:42px;padding:30px 20px;background:#041a2a;color:#c8d8e5;font-size:13px}.kb-footer-inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;gap:24px}.kb-footer a{color:#dbeafe;text-decoration:none}
+@media(max-width:720px){.kb-header-inner{padding:10px 14px;justify-content:center}.kb-brand-logo{width:118px}.kb-nav{display:none}.kb-footer-inner{display:block}.kb-blog-wrap{margin-top:14px!important}}
+</style>
 
-<style id="kbridge-header-logo-fix">
+<style id="kbridge-clean-header-style">
+  :root {
+    --kb-navy: #06263d;
+    --kb-blue: #0ea5c8;
+    --kb-line: #e5edf5;
+  }
   .site-header {
     width: 100%;
-    background: rgba(255,255,255,.96);
-    border-bottom: 1px solid #e5edf5;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--kb-line);
     position: sticky;
     top: 0;
     z-index: 9999;
@@ -464,7 +477,7 @@
   .site-header__inner {
     max-width: 1180px;
     margin: 0 auto;
-    padding: 12px 22px;
+    padding: 10px 22px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -473,12 +486,12 @@
   .site-logo {
     display: inline-flex;
     align-items: center;
-    text-decoration: none;
     flex: 0 0 auto;
+    text-decoration: none;
   }
   .site-logo img {
     display: block;
-    width: 142px;
+    width: 132px;
     height: auto;
     object-fit: contain;
   }
@@ -486,32 +499,40 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 22px;
-    font-size: 14px;
+    gap: 20px;
+    font-size: 13px;
     font-weight: 700;
     white-space: nowrap;
   }
   .site-nav a {
-    color: #0f2742;
+    color: var(--kb-navy);
     text-decoration: none;
   }
   .site-nav a:hover {
-    color: #0891b2;
+    color: var(--kb-blue);
   }
-  @media (max-width: 760px) {
+  @media (max-width: 768px) {
     .site-header__inner {
-      padding: 10px 16px;
+      padding: 9px 14px;
       justify-content: center;
     }
     .site-logo img {
-      width: 118px;
+      width: 112px;
     }
     .site-nav {
       display: none;
     }
   }
-  body {
-    padding-top: 0 !important;
+</style>
+
+<style id="kbridge-mobile-optimize">
+  img { max-width: 100%; height: auto; }
+  table { max-width: 100%; }
+  @media (max-width: 768px) {
+    body { overflow-x: hidden; }
+    .blog-card, .post-card, .kb-card, .card { max-width: 100%; }
+    .blog-grid, .posts-grid, .kb-card-grid { grid-template-columns: 1fr !important; }
+    table { display: block; overflow-x: auto; white-space: nowrap; }
   }
 </style>
 </head>
@@ -531,6 +552,14 @@
 </div>
 </header>
 
+<header class="kb-header">
+<div class="kb-header-inner">
+<a aria-label="케이브릿지 해외특송 메인으로 이동" class="kb-brand" href="../index.html"><img alt="KBridge 케이브릿지 주식회사" class="kb-brand-logo" src="images/kbridge-logo-official.png"/></a>
+<nav aria-label="주요 메뉴" class="kb-nav">
+<a href="../index.html">해외특송 메인</a><a href="index.html">블로그</a><a href="../index.html#quote">견적문의</a><a href="../index.html#compare">운송 방식 선택</a><a href="../index.html#process">진행 절차</a><a href="../index.html#contact">실시간 문의</a>
+</nav>
+</div>
+</header>
 <article class="kb-blog-wrap">
 <section class="kb-hero">
 <span class="kb-label">K-BRIDGE 해외특송 서비스</span>
@@ -855,5 +884,6 @@
 <span>#케이브릿지</span>
 </section>
 </article>
+<footer class="kb-footer"><div class="kb-footer-inner"><div><strong>KBridge</strong><br/>케이브릿지가 운영하는 해외특송 서비스</div><div>문의<br/><a href="mailto:all@kbridges.co.kr">all@kbridges.co.kr</a></div></div></footer>
 </body>
 </html>
