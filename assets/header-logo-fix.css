@@ -1,0 +1,44 @@
+
+/* KBridge header/logo consistency patch */
+.site-header {
+  width: 100%;
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid #e5edf5;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+}
+.site-header__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 12px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.site-logo img {
+  display: block;
+  width: 142px;
+  height: auto;
+  object-fit: contain;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 22px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.site-nav a {
+  color: #0f2742;
+  text-decoration: none;
+}
+@media (max-width: 760px) {
+  .site-header__inner { padding: 10px 16px; justify-content: center; }
+  .site-logo img { width: 118px; }
+  .site-nav { display: none; }
+}
