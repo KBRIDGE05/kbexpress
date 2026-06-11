@@ -241,7 +241,7 @@ img{max-width:100%;height:auto}
         grid.innerHTML = posts.map(post => `
           <article class="card">
             <a class="thumb" href="${escapeHtml(localPath(post.url))}" aria-label="${escapeHtml(post.title)}">
-              <img src="${escapeHtml(localPath(post.thumbnail))}" alt="${escapeHtml(post.alt || post.title)}" loading="lazy">
+              <img src="${escapeHtml(localPath(post.thumbnail))}" alt="${escapeHtml(post.alt || post.title)}" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#eef8fc,#dff5fb)';">
             </a>
             <div class="card-body">
               <div class="meta">${escapeHtml(post.date)} · ${escapeHtml(post.category || '해외특송 정보')}</div>

@@ -559,7 +559,7 @@ img{max-width:100%;height:auto}
           <p>해외특송, 통관, 인보이스, 운임 계산, 실제 문의 사례 등<br>케이브릿지 해외특송과 관련된 글을 계속 업데이트합니다.</p>
         </div>
         <div class="blog-actions">
-          <a href="https://kbridge05.github.io/kbexpress/blog/kbridge_express_blog_first_post.html" class="blog-filter">블로그 글 보기</a>
+          <a href="blog/index.html" class="blog-filter">전체 보기</a>
         </div>
       </div>
 
@@ -645,24 +645,53 @@ img{max-width:100%;height:auto}
       const grid = document.getElementById('latestBlogGrid');
       if(!grid) return;
 
-      // 블로그 경로 404 방지를 위해 실제 기존에 정상 접속되는 GitHub Pages 블로그 URL로 고정합니다.
-      // kbexpress.kr 도메인 하위 /blog 경로에 파일이 없거나 배포 경로가 달라도 404가 발생하지 않습니다.
-      const postUrl = 'https://kbridge05.github.io/kbexpress/blog/kbridge_express_blog_first_post.html';
-      const thumbUrl = 'https://kbridge05.github.io/kbexpress/blog/images/thumbnail-express-logistics.webp';
+      function escapeHtml(value){
+        return String(value || '').replace(/[&<>\"]/g, function(ch){
+          return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[ch];
+        });
+      }
 
-      grid.innerHTML = `
-        <article class="blog-card">
-          <a class="blog-thumb" href="${postUrl}" aria-label="해외특송, 보내기 전에 꼭 확인해야 할 것">
-            <img src="${thumbUrl}" alt="케이브릿지 해외특송 물류정보 썸네일" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#eef8fc,#dff5fb)';">
-          </a>
-          <div class="blog-body">
-            <div class="blog-meta">2026.06.09 · 해외특송 정보</div>
-            <h3 class="blog-title">해외특송, 보내기 전에 꼭 확인해야 할 것</h3>
-            <p class="blog-excerpt">품목 가능 여부, 인보이스 작성, 수취인 정보, 관부가세와 통관 지연까지 해외특송 발송 전 확인해야 할 실무 포인트를 정리했습니다.</p>
-            <a class="blog-read" href="${postUrl}">자세히 보기</a>
-          </div>
-        </article>
-      `;
+      function fallback(){
+        grid.innerHTML = `
+          <article class="blog-card">
+            <a class="blog-thumb" href="blog/kbridge-express-service-guide.html" aria-label="해외특송, 보내기 전에 꼭 확인해야 할 것">
+              <img src="blog/images/thumbnail-express-logistics-info.webp" alt="케이브릿지 해외특송 물류정보 썸네일" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#eef8fc,#dff5fb)';">
+            </a>
+            <div class="blog-body">
+              <div class="blog-meta">2026.06.11 · 해외특송 정보</div>
+              <h3 class="blog-title">해외특송, 보내기 전에 꼭 확인해야 할 것</h3>
+              <p class="blog-excerpt">품목 가능 여부, 인보이스 작성, 수취인 정보, 관부가세와 통관 지연까지 해외특송 발송 전 확인해야 할 실무 포인트를 정리했습니다.</p>
+              <a class="blog-read" href="blog/kbridge-express-service-guide.html">자세히 보기</a>
+            </div>
+          </article>
+        `;
+      }
+
+      function render(posts){
+        if(!Array.isArray(posts) || !posts.length){ fallback(); return; }
+        const latest = posts.slice(0, 3);
+        grid.innerHTML = latest.map(post => `
+          <article class="blog-card">
+            <a class="blog-thumb" href="${escapeHtml(post.url)}" aria-label="${escapeHtml(post.title)}">
+              <img src="${escapeHtml(post.thumbnail)}" alt="${escapeHtml(post.alt || post.title)}" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#eef8fc,#dff5fb)';">
+            </a>
+            <div class="blog-body">
+              <div class="blog-meta">${escapeHtml(post.date)} · ${escapeHtml(post.category || '해외특송 정보')}</div>
+              <h3 class="blog-title">${escapeHtml(post.title)}</h3>
+              <p class="blog-excerpt">${escapeHtml(post.excerpt)}</p>
+              <a class="blog-read" href="${escapeHtml(post.url)}">자세히 보기</a>
+            </div>
+          </article>
+        `).join('');
+      }
+
+      fetch('blog/posts.json', {cache:'no-store'})
+        .then(response => {
+          if(!response.ok) throw new Error('posts.json load failed');
+          return response.json();
+        })
+        .then(render)
+        .catch(fallback);
     }
 
     loadLatestBlogPosts();
