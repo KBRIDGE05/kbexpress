@@ -159,7 +159,6 @@ img{max-width:100%;height:auto}
 }
 
   </style>
-
 <style id="kb-blog-logo-mobile-fix">
   .kb-main-logo img,.kb-main-footer-brand img{width:138px!important;height:auto!important;object-fit:contain!important;}
   .kb-main-logo span,.kb-main-footer-brand span{display:none!important;}
@@ -169,6 +168,64 @@ img{max-width:100%;height:auto}
     .kb-main-menu{display:none!important;}
     .article-grid{grid-template-columns:1fr!important;}
     .thumb{aspect-ratio:1200/630!important;height:auto!important;}
+  }
+</style>
+
+<style id="kb-single-header-fix">
+  .kb-main-topbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #e3eef5;
+  }
+  .kb-main-wrap{
+    width:min(1120px,calc(100% - 40px));
+    margin:0 auto;
+  }
+  .kb-main-nav{
+    min-height:64px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+  }
+  .kb-main-logo{
+    display:inline-flex;
+    align-items:center;
+    text-decoration:none;
+  }
+  .kb-main-logo img{
+    display:block;
+    width:132px;
+    height:auto;
+    object-fit:contain;
+  }
+  .kb-main-logo span{
+    display:none!important;
+  }
+  .kb-main-menu{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    font-size:13px;
+    font-weight:800;
+    color:#10273a;
+    white-space:nowrap;
+  }
+  .kb-main-menu a{
+    color:inherit;
+    text-decoration:none;
+  }
+  .kb-main-menu a:hover{
+    color:#0b6ea8;
+  }
+  @media(max-width:760px){
+    .kb-main-wrap{width:min(100% - 28px,1120px);}
+    .kb-main-nav{min-height:58px;justify-content:center;}
+    .kb-main-logo img{width:112px;}
+    .kb-main-menu{display:none!important;}
   }
 </style>
 </head>

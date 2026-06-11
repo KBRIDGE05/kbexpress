@@ -451,12 +451,13 @@
     }
   </style>
 
-<style id="kb-detail-header-fix">
+
+<style id="kb-single-header-fix">
   .kb-main-topbar{
     position:sticky;
     top:0;
-    z-index:100;
-    background:rgba(255,255,255,.94);
+    z-index:1000;
+    background:rgba(255,255,255,.96);
     backdrop-filter:blur(12px);
     border-bottom:1px solid #e3eef5;
   }
@@ -465,7 +466,7 @@
     margin:0 auto;
   }
   .kb-main-nav{
-    height:72px;
+    min-height:64px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -475,18 +476,20 @@
     display:inline-flex;
     align-items:center;
     text-decoration:none;
-    line-height:1;
   }
   .kb-main-logo img{
     display:block;
-    width:138px;
+    width:132px;
     height:auto;
     object-fit:contain;
+  }
+  .kb-main-logo span{
+    display:none!important;
   }
   .kb-main-menu{
     display:flex;
     align-items:center;
-    gap:22px;
+    gap:20px;
     font-size:13px;
     font-weight:800;
     color:#10273a;
@@ -496,12 +499,14 @@
     color:inherit;
     text-decoration:none;
   }
-  .kb-main-menu a:hover{color:#0b6ea8;}
+  .kb-main-menu a:hover{
+    color:#0b6ea8;
+  }
   @media(max-width:760px){
     .kb-main-wrap{width:min(100% - 28px,1120px);}
-    .kb-main-nav{height:62px;justify-content:center;}
-    .kb-main-logo img{width:116px;}
-    .kb-main-menu{display:none;}
+    .kb-main-nav{min-height:58px;justify-content:center;}
+    .kb-main-logo img{width:112px;}
+    .kb-main-menu{display:none!important;}
   }
 </style>
 </head>
@@ -523,7 +528,6 @@
 </nav>
 </div>
 </header>
-
 <article class="kb-blog-wrap">
 <section class="kb-hero">
 <span class="kb-label">K-BRIDGE 해외특송 서비스</span>
@@ -554,7 +558,6 @@
 <h2 class="kb-visual-title">비주얼 카드 | 해외특송 발송 전 핵심 체크</h2>
 <img alt="해외특송 발송 전 핵심 체크 4가지" src="visuals/visual-express-checklist.webp" style="width:100%;height:auto;border-radius:14px;display:block;"/>
 </section>
-
 <section class="kb-visual-block">
 <h2 class="kb-visual-title">비주얼 카드 | 해외특송 발송 전 핵심 체크 4가지</h2>
 <div class="kb-visual-grid">
