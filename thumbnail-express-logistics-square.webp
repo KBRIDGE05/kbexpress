@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>해외특송 보내기 전 체크리스트 | 품목·인보이스·통관·배송사 선택</title>
+<meta content="해외특송 발송 전 반드시 확인해야 할 품목 제한, 인보이스 작성, 수취인 정보, 관부가세, 통관 지연 원인과 DHL·FedEx·UPS·EMS 선택 기준을 실무 중심으로 정리했습니다." name="description"/>
+<meta content="해외특송, 국제특송, 해외배송, 인보이스 작성, 해외통관, DHL, FedEx, UPS, EMS, 수출샘플, 관부가세, 케이브릿지" name="keywords"/>
+<meta content="해외특송 보내기 전 꼭 확인해야 할 체크리스트 | 케이브릿지" property="og:title"/>
+<meta content="품목 제한부터 인보이스, 통관, 관부가세, 배송사 선택까지 해외특송 실무 핵심을 한 번에 확인하세요." property="og:description"/>
+<meta content="images/thumbnail-express-logistics-square.webp" property="og:image"/>
+<meta content="summary" name="twitter:card"/>
+<style>
+    :root {
+      --kb-blue: #1d4ed8;
+      --kb-navy: #0f172a;
+      --kb-text: #334155;
+      --kb-muted: #64748b;
+      --kb-line: #e2e8f0;
+      --kb-bg: #f8fafc;
+      --kb-soft-blue: #eff6ff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #f1f5f9;
+      font-family: "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+      color: var(--kb-text);
+      word-break: keep-all;
+    }
+
+    .kb-blog-wrap {
+      max-width: 860px;
+      margin: 20px auto 44px;
+      padding: 30px 34px 38px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 14px 36px rgba(15, 23, 42, 0.06);
+      font-size: 15.5px;
+      line-height: 1.82;
+      letter-spacing: -0.015em;
+    }
+
+    .kb-blog-wrap * {
+      box-sizing: border-box;
+    }
+
+    .kb-hero {
+      padding: 30px 26px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #f3f8ff 0%, #ffffff 72%);
+      border: 1px solid #dbeafe;
+      margin-bottom: 24px;
+    }
+
+    .kb-label {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--kb-blue);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 25px;
+      line-height: 1.38;
+      letter-spacing: -0.045em;
+      color: var(--kb-navy);
+      margin: 0 0 12px;
+      font-weight: 800;
+    }
+
+    .kb-sub {
+      font-size: 15.5px;
+      line-height: 1.78;
+      color: #475569;
+      margin: 0;
+    }
+
+    .kb-summary {
+      margin: 20px 0 24px;
+      padding: 17px 18px;
+      border-radius: 14px;
+      background: var(--kb-bg);
+      border-left: 4px solid var(--kb-blue);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .kb-summary strong {
+      color: var(--kb-blue);
+    }
+
+    .kb-toc {
+      margin: 0 0 28px;
+      padding: 20px 20px 18px;
+      border-radius: 16px;
+      background: #fbfdff;
+      border: 1px solid #dbeafe;
+    }
+
+    .kb-toc h2 {
+      font-size: 17px;
+      line-height: 1.4;
+      color: var(--kb-navy);
+      margin: 0 0 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .kb-toc ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .kb-toc li {
+      margin: 7px 0;
+      font-size: 14.5px;
+      line-height: 1.6;
+    }
+
+    .kb-toc a {
+      color: #1e3a8a;
+      text-decoration: none;
+    }
+
+    .kb-toc a:hover {
+      text-decoration: underline;
+    }
+
+
+    .kb-img-figure {
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+
+    .kb-img-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      border: 1px solid #dbeafe;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.055);
+    }
+
+    .kb-img-figure figcaption {
+      margin-top: 8px;
+      color: #64748b;
+      font-size: 13px;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    .kb-visual-block {
+      margin: 0 0 28px;
+      padding: 18px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #fcfdff 0%, #f8fbff 100%);
+      border: 1px solid #dbeafe;
+    }
+
+    .kb-visual-title {
+      font-size: 16px;
+      line-height: 1.45;
+      font-weight: 800;
+      color: var(--kb-navy);
+      margin: 0 0 12px;
+      letter-spacing: -0.03em;
+    }
+
+    .kb-visual-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .kb-visual-card {
+      padding: 14px 14px 13px;
+      border-radius: 14px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.035);
+    }
+
+    .kb-visual-card b {
+      display: block;
+      font-size: 14px;
+      line-height: 1.4;
+      color: var(--kb-blue);
+      margin-bottom: 5px;
+    }
+
+    .kb-visual-card p {
+      margin: 0;
+      font-size: 13.8px;
+      line-height: 1.62;
+      color: #475569;
+    }
+
+    .kb-section {
+      position: relative;
+      margin: 30px 0;
+      padding: 24px 22px 22px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid var(--kb-line);
+      box-shadow: 0 7px 20px rgba(15, 23, 42, 0.035);
+    }
+
+    .kb-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #1d4ed8 0%, #93c5fd 100%);
+      border-radius: 16px 16px 0 0;
+    }
+
+    .kb-section h2 {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      margin: 0 0 16px;
+      padding: 0 0 12px;
+      border-bottom: 1px solid #dbeafe;
+      color: var(--kb-navy);
+      font-size: 19px;
+      line-height: 1.42;
+      letter-spacing: -0.04em;
+      font-weight: 800;
+    }
+
+    .kb-section h2 .sec-num {
+      flex: 0 0 auto;
+      min-width: 28px;
+      height: 28px;
+      padding: 0 7px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--kb-blue);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1;
+      margin-top: 1px;
+    }
+
+    .kb-section h2 .sec-title {
+      display: inline-block;
+    }
+
+    .kb-section h3 {
+      font-size: 16px;
+      color: #1e3a8a;
+      margin: 22px 0 8px;
+      line-height: 1.45;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+    }
+
+    .kb-section p {
+      margin: 0 0 14px;
+    }
+
+    .kb-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .kb-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    .kb-card {
+      padding: 15px 15px 14px;
+      border-radius: 14px;
+      background: #fbfdff;
+      border: 1px solid #e2e8f0;
+      font-size: 14.5px;
+      line-height: 1.65;
+    }
+
+    .kb-card b {
+      display: block;
+      color: var(--kb-blue);
+      margin-bottom: 5px;
+      font-size: 14.5px;
+      line-height: 1.35;
+    }
+
+    .kb-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .kb-table th {
+      background: var(--kb-soft-blue);
+      color: #1e3a8a;
+      text-align: left;
+      padding: 10px 11px;
+      border: 1px solid #dbeafe;
+      font-weight: 800;
+    }
+
+    .kb-table td {
+      padding: 10px 11px;
+      border: 1px solid var(--kb-line);
+      vertical-align: top;
+    }
+
+    .kb-point {
+      padding: 16px 17px;
+      border-radius: 14px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      margin: 18px 0 0;
+      font-size: 14.5px;
+      line-height: 1.68;
+    }
+
+    .kb-point strong {
+      color: #c2410c;
+    }
+
+    .kb-checklist {
+      padding: 17px 18px;
+      border-radius: 14px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      margin: 16px 0;
+    }
+
+    .kb-checklist ul,
+    .kb-section ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .kb-checklist li,
+    .kb-section li {
+      margin: 6px 0;
+      line-height: 1.65;
+    }
+
+    .kb-tags {
+      margin-top: 28px;
+      padding: 17px;
+      border-radius: 14px;
+      background: var(--kb-bg);
+      border: 1px solid var(--kb-line);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .kb-tags span {
+      display: inline-block;
+      margin: 4px 3px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: #075985;
+      font-size: 12.5px;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    strong {
+      color: #1e3a8a;
+    }
+
+
+
+    .kb-site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid #e2e8f0;
+      backdrop-filter: blur(10px);
+    }
+
+    .kb-site-header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .kb-site-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .kb-site-brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0ea5e9, #1d4ed8);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .kb-site-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .kb-site-nav a,
+    .kb-back-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      color: #1e3a8a;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .kb-site-nav a:hover,
+    .kb-back-btn:hover {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+    }
+
+    .kb-bottom-nav {
+      margin-top: 30px;
+      padding: 18px;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .kb-bottom-nav-title {
+      margin: 0;
+      color: #0f172a;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 640px) {
+
+      .kb-site-header-inner {
+        padding: 10px 12px;
+        align-items: flex-start;
+      }
+
+      .kb-site-nav {
+        gap: 6px;
+      }
+
+      .kb-site-nav a,
+      .kb-back-btn {
+        min-height: 31px;
+        padding: 7px 9px;
+        font-size: 12px;
+      }
+
+      .kb-blog-wrap {
+        margin: 12px auto 30px;
+        padding: 22px 14px 30px;
+        border-radius: 0;
+        font-size: 14.5px;
+        line-height: 1.78;
+      }
+
+      .kb-hero {
+        padding: 24px 18px;
+        border-radius: 16px;
+        margin-bottom: 22px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      .kb-sub {
+        font-size: 14.5px;
+      }
+
+      .kb-summary {
+        font-size: 14.5px;
+        padding: 15px 16px;
+      }
+
+      .kb-toc {
+        padding: 17px 16px 15px;
+      }
+
+      .kb-toc h2 {
+        font-size: 16px;
+      }
+
+      .kb-toc li {
+        font-size: 14px;
+      }
+
+      .kb-visual-block {
+        padding: 15px;
+      }
+
+      .kb-visual-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .kb-section {
+        margin: 24px 0;
+        padding: 22px 16px 20px;
+        border-radius: 15px;
+      }
+
+      .kb-section h2 {
+        font-size: 18px;
+        gap: 8px;
+      }
+
+      .kb-section h2 .sec-num {
+        min-width: 26px;
+        height: 26px;
+        font-size: 11.5px;
+      }
+
+      .kb-section h3 {
+        font-size: 15.5px;
+      }
+
+      .kb-card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .kb-card {
+        font-size: 14px;
+      }
+
+      .kb-table {
+        font-size: 13.5px;
+        display: block;
+        overflow-x: auto;
+        white-space: normal;
+      }
+
+      .kb-table th,
+      .kb-table td {
+        padding: 9px;
+        min-width: 140px;
+      }
+    }
+  
+
+/* ===== KBRIDGE shared header/footer for blog pages ===== */
+.kb-main-wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.kb-main-topbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(217,235,244,.9)}
+.kb-main-nav{height:72px;display:flex;align-items:center;gap:24px}
+.kb-main-logo{display:flex;align-items:center;gap:12px;color:#06253b;text-decoration:none}
+.kb-main-logo img{display:block;width:40px;height:40px;object-fit:contain;flex:0 0 40px}
+.kb-main-logo span{display:flex;align-items:center;font-size:18px;font-weight:950;letter-spacing:-.03em;color:#06253b}
+.kb-main-menu{display:flex;align-items:center;gap:24px;margin-left:auto;font-size:13px;font-weight:850;color:#2d4153}
+.kb-main-menu a{position:relative;padding:8px 0;white-space:nowrap;text-decoration:none;color:inherit}
+.kb-main-menu a:after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;border-radius:10px;background:linear-gradient(90deg,#0b6ea8,#17bfd6);transition:.2s}
+.kb-main-menu a:hover:after{width:100%}
+.kb-main-footer{padding:34px 0 16px;background:#041a2a;color:#a9c0d3}
+.kb-main-footer-top{display:grid;grid-template-columns:1.45fr .65fr;gap:48px;align-items:flex-start}
+.kb-main-footer-brand{display:flex;align-items:center;gap:14px;font-weight:950;color:#fff;margin-bottom:18px;text-decoration:none}
+.kb-main-footer-brand img{width:50px;height:50px;object-fit:contain;flex:0 0 50px}
+.kb-main-footer-brand span{display:flex;align-items:center;font-size:22px;font-weight:950;letter-spacing:-.03em;color:#fff}
+.kb-main-footer-desc{max-width:720px;font-size:14px;line-height:1.8;color:#d6e5ef;margin:0}
+.kb-main-footer-contact-title{font-size:13px;font-weight:950;color:#fff;margin-bottom:18px}
+.kb-main-footer-contact a{display:block;color:#d6edfa;font-size:13.5px;margin-top:12px;text-decoration:none}
+.kb-main-footer-divider{height:1px;background:rgba(255,255,255,.16);margin:28px 0 22px}
+.kb-main-footer-bottom{display:flex;justify-content:space-between;gap:20px;align-items:flex-end}
+.kb-main-footer-company{font-size:12.8px;line-height:2;color:#b8cbd9}
+.kb-main-footer-company a{color:#fff;font-weight:950;text-decoration:none}
+.kb-main-footer-copy{font-size:12.5px;color:#b8cbd9;white-space:nowrap}
+@media (max-width:860px){
+  .kb-main-wrap{width:min(100% - 28px,1180px)}
+  .kb-main-nav{height:auto;min-height:68px;padding:12px 0;align-items:flex-start;flex-direction:column;gap:8px}
+  .kb-main-logo img{width:34px;height:34px;flex-basis:34px}
+  .kb-main-logo span{font-size:16px}
+  .kb-main-menu{margin-left:0;gap:14px;flex-wrap:wrap;font-size:12.5px}
+  .kb-main-footer-top,.kb-main-footer-bottom{grid-template-columns:1fr;display:grid}
+  .kb-main-footer-copy{white-space:normal}
+  .kb-main-footer-brand img{width:42px;height:42px;flex-basis:42px}
+  .kb-main-footer-brand span{font-size:20px}
+}
+
+  </style>
+</head>
+<body>
+<header class="kb-main-topbar" id="top">
+<div class="kb-main-wrap">
+<nav aria-label="케이브릿지 상단 메뉴" class="kb-main-nav">
+<a aria-label="KBRIDGE 해외특송 메인" class="kb-main-logo" href="../index.html">
+<img alt="KBRIDGE 아이콘" src="../assets/kbridge-icon.png"/>
+<span>KBRIDGE</span>
+</a>
+<div class="kb-main-menu">
+<a href="../index.html">해외특송 메인</a>
+<a href="../blog/index.html">블로그</a>
+<a href="../index.html#quote">견적문의</a>
+<a href="../index.html#carrier">운송 방식 선택</a>
+<a href="../index.html#process">진행 절차</a>
+<a href="https://pf.kakao.com/_baLgb/chat" rel="noopener" target="_blank">실시간 문의</a>
+</div>
+</nav>
+</div>
+</header>
+<article class="kb-blog-wrap">
+<section class="kb-hero">
+<span class="kb-label">KBRIDGE 해외특송 실무 가이드</span>
+<h1>해외특송, 보내기 전에 꼭 확인해야 할 것</h1>
+<p class="kb-sub">해외특송은 운송장만 만들면 끝나는 배송이 아닙니다. <strong>품목 제한, 인보이스, 수취인 정보, 통관 조건, 관부가세 부담 주체</strong>를 발송 전에 확인해야 배송 지연과 반송 위험을 줄일 수 있습니다.</p>
+</section>
+<figure class="kb-img-figure">
+<img alt="해외특송 보내기 전 체크리스트 - 품목, 인보이스, 통관, 배송사 선택" src="images/thumbnail-express-logistics-square.webp"/>
+<figcaption>해외특송 발송 전 확인해야 할 핵심 항목을 실무 기준으로 정리했습니다.</figcaption>
+</figure>
+<section class="kb-summary">
+<strong>핵심 요약</strong><br/>
+  ① 보내려는 물품이 운송사와 도착국 기준상 접수 가능한지 확인합니다.<br/>
+  ② 인보이스에는 구체적인 품명·수량·단가·총액·원산지·용도를 정확히 기재합니다.<br/>
+  ③ 수취인의 연락처와 통관 대응 가능 여부, 관부가세 부담 주체를 사전에 협의합니다.<br/>
+  ④ 가장 저렴한 운임보다 품목과 일정에 맞는 배송사를 선택하는 것이 중요합니다.
+</section>
+<nav class="kb-toc">
+<h2>목차</h2>
+<ol>
+<li><a href="#sec1">해외특송 사전 확인이 중요한 이유</a></li>
+<li><a href="#sec2">발송 전 필수 체크리스트 5가지</a></li>
+<li><a href="#sec3">Commercial Invoice 작성 방법</a></li>
+<li><a href="#sec4">통관 지연이 발생하는 대표 원인</a></li>
+<li><a href="#sec5">DHL·FedEx·UPS·EMS 선택 기준</a></li>
+<li><a href="#sec6">해외특송 진행 절차</a></li>
+<li><a href="#sec7">자주 묻는 질문</a></li>
+</ol>
+</nav>
+<section class="kb-section" id="sec1">
+<h2><span class="sec-num">01</span><span class="sec-title">해외특송은 빠른 배송보다 정확한 사전 확인이 먼저입니다</span></h2>
+<p>해외특송은 항공 네트워크를 이용해 비교적 빠르게 해외로 물품을 보내는 방식입니다. 하지만 접수 이후 현지 세관에서 문제가 발생하면 배송 속도보다 더 큰 시간과 비용이 들 수 있습니다.</p>
+<p>특히 <strong>배터리, 액체류, 화장품, 식품, 의료기기, 화학제품, 자석류</strong>는 운송사와 국가에 따라 접수 제한이나 추가 서류가 필요할 수 있습니다. 소량 샘플이라도 통관상 수입 물품으로 취급되므로 “작은 물건이니까 괜찮다”는 판단은 위험합니다.</p>
+<div class="kb-point"><strong>실무 포인트</strong><br/>운임을 확인하기 전에 먼저 품목명, 재질, 용도, 수량, 가격, 배터리 포함 여부를 확인해야 정확한 발송 가능 여부를 판단할 수 있습니다.</div>
+</section>
+<section class="kb-section" id="sec2">
+<h2><span class="sec-num">02</span><span class="sec-title">발송 전 반드시 확인해야 할 5가지</span></h2>
+<div class="kb-card-grid">
+<div class="kb-card"><b>1. 구체적인 품목 정보</b>제품명뿐 아니라 재질, 기능, 사용 목적, 배터리·액체 포함 여부까지 확인합니다.</div>
+<div class="kb-card"><b>2. 정확한 물품 가격</b>무료 샘플이라도 0원 대신 합리적인 상업가치를 기재하는 것이 일반적입니다.</div>
+<div class="kb-card"><b>3. 수취인 통관 정보</b>회사명, 담당자, 전화번호, 이메일, 우편번호, 필요 시 사업자·세금번호를 확인합니다.</div>
+<div class="kb-card"><b>4. 도착국 수입 규정</b>식품, 화장품, 전자제품 등은 인증·허가·성분표가 필요한지 사전 검토합니다.</div>
+<div class="kb-card"><b>5. 관부가세 부담 주체</b>도착국 세금과 통관 비용을 발송인 또는 수취인 중 누가 부담할지 협의합니다.</div>
+</div>
+</section>
+<section class="kb-section" id="sec3">
+<h2><span class="sec-num">03</span><span class="sec-title">Commercial Invoice는 통관의 기준이 되는 핵심 서류입니다</span></h2>
+<p>Commercial Invoice는 단순한 거래명세서가 아니라 세관이 물품의 내용과 가격, 용도, 수입 가능 여부를 판단하는 기본 서류입니다.</p>
+<table class="kb-table">
+<thead><tr><th>기재 항목</th><th>작성 방법</th></tr></thead>
+<tbody>
+<tr><td><strong>Shipper / Consignee</strong></td><td>발송인과 수취인의 회사명, 주소, 담당자, 전화번호, 이메일을 정확히 작성합니다.</td></tr>
+<tr><td><strong>Item Description</strong></td><td>“Sample”, “Parts”처럼 모호한 표현 대신 제품의 기능과 재질이 드러나는 구체적인 영문 품명을 사용합니다.</td></tr>
+<tr><td><strong>Quantity / Value</strong></td><td>수량, 단가, 총액, 통화를 일치시켜 작성합니다.</td></tr>
+<tr><td><strong>Country of Origin</strong></td><td>실제 제조국을 기재합니다.</td></tr>
+<tr><td><strong>Purpose of Export</strong></td><td>판매, 샘플, 테스트, 수리, 전시 등 실제 발송 목적을 명확하게 적습니다.</td></tr>
+<tr><td><strong>HS CODE</strong></td><td>가능하면 사전 분류 후 기재하되, 품명과 실제 제품 정보가 일치해야 합니다.</td></tr>
+</tbody>
+</table>
+<div class="kb-point"><strong>피해야 할 표현</strong><br/>“Gift”, “No Value”, “Sample Only”, “Parts”만 단독으로 작성하면 세관에서 추가 설명이나 가격 증빙을 요구할 수 있습니다.</div>
+</section>
+<section class="kb-section" id="sec4">
+<h2><span class="sec-num">04</span><span class="sec-title">통관 지연이 발생하는 대표적인 이유</span></h2>
+<ul>
+<li><strong>품명이 너무 포괄적이거나 실제 물품과 다른 경우</strong></li>
+<li><strong>신고 가격이 지나치게 낮거나 가격 증빙이 부족한 경우</strong></li>
+<li><strong>수취인 연락처·세금번호·사업자 정보가 누락된 경우</strong></li>
+<li><strong>도착국에서 인증, 허가, 성분표, 원산지 자료를 요구하는 경우</strong></li>
+<li><strong>배터리·액체·화학제품 등 제한 품목 정보를 사전에 알리지 않은 경우</strong></li>
+</ul>
+<p>통관 보류가 발생하면 운송장 조회 화면의 상태만 기다리기보다, 운송사 또는 현지 수취인을 통해 <strong>세관이 요구하는 자료가 무엇인지 먼저 확인</strong>해야 합니다.</p>
+</section>
+<section class="kb-section" id="sec5">
+<h2><span class="sec-num">05</span><span class="sec-title">DHL·FedEx·UPS·EMS는 무엇을 기준으로 선택해야 할까요?</span></h2>
+<table class="kb-table">
+<thead><tr><th>운송 방식</th><th>적합한 경우</th><th>확인할 사항</th></tr></thead>
+<tbody>
+<tr><td><strong>DHL / FedEx / UPS</strong></td><td>기업 샘플, 긴급 부품, 빠른 추적과 현지 통관 대응이 필요한 발송</td><td>부피무게, 접수 제한, 현지 관부가세, 수취인 통관 대응 여부</td></tr>
+<tr><td><strong>EMS</strong></td><td>비교적 단순한 소형 물품, 우편망 기반 배송을 선호하는 경우</td><td>국가별 배달 속도와 추적 범위, 품목 제한 차이</td></tr>
+<tr><td><strong>일반 항공화물</strong></td><td>특송 규격을 초과하거나 중량·대량 화물인 경우</td><td>수출신고, 항공 스케줄, 현지 통관 및 최종 배송 조건</td></tr>
+</tbody>
+</table>
+<p>가장 저렴한 운임만 비교하기보다 <strong>도착국, 품목, 마감 일정, 포장 크기, 통관 난이도</strong>를 함께 고려해야 합니다.</p>
+</section>
+<section class="kb-section" id="sec6">
+<h2><span class="sec-num">06</span><span class="sec-title">케이브릿지 해외특송 진행 절차</span></h2>
+<div class="kb-checklist">
+<ul>
+<li><strong>1단계 | 기본 정보 확인</strong> : 국가, 품목, 용도, 수량, 무게, 포장 크기 확인</li>
+<li><strong>2단계 | 발송 가능 여부 검토</strong> : 제한 품목과 추가 서류 필요 여부 확인</li>
+<li><strong>3단계 | 운송 방식 및 운임 안내</strong> : 일정과 조건에 맞는 배송사 비교</li>
+<li><strong>4단계 | 인보이스 점검</strong> : 품명, 가격, 원산지, 용도, HS CODE 확인</li>
+<li><strong>5단계 | 픽업 및 발송</strong> : 운송장 발행 후 픽업 또는 입고 진행</li>
+<li><strong>6단계 | 배송·통관 추적</strong> : 통관 보류 발생 시 요청 자료 확인 및 대응</li>
+</ul>
+</div>
+</section>
+<section class="kb-section" id="sec7">
+<h2><span class="sec-num">07</span><span class="sec-title">자주 묻는 질문</span></h2>
+<h3>Q. 무료 샘플은 인보이스 금액을 0원으로 적어도 되나요?</h3>
+<p>무료 제공 물품이라도 제품 자체의 가치가 있다면 합리적인 샘플 가치를 기재하는 것이 일반적입니다. 0원 또는 지나치게 낮은 금액은 가격 증빙 요청으로 이어질 수 있습니다.</p>
+<h3>Q. 관세와 부가세는 누가 납부하나요?</h3>
+<p>일반적으로 도착국에서 발생하는 관부가세는 수취인이 부담하는 경우가 많습니다. 다만 거래 조건과 운송사 서비스에 따라 발송인 부담이 가능한 경우도 있으므로 발송 전에 확인해야 합니다.</p>
+<h3>Q. 통관이 멈추면 바로 반송되나요?</h3>
+<p>대부분은 즉시 반송되지 않고 추가 서류나 정보 제출을 요청합니다. 정해진 기간 안에 대응하지 못하면 보관료, 반송비, 폐기 비용이 발생할 수 있습니다.</p>
+<h3>Q. 개인 발송과 기업 샘플 발송은 같은가요?</h3>
+<p>목적과 증빙 방식이 다를 수 있습니다. 기업 발송은 수취인 사업자 정보, 거래 목적, 인보이스, HS CODE가 더 중요하게 검토될 수 있습니다.</p>
+</section>
+<section class="kb-visual-block">
+<h2 class="kb-visual-title">해외특송 문의 전 준비하면 좋은 정보</h2>
+<div class="kb-visual-grid">
+<div class="kb-visual-card"><b>도착 국가와 우편번호</b><p>도착지에 따라 운임과 배송 가능 지역이 달라집니다.</p></div>
+<div class="kb-visual-card"><b>정확한 품목명과 용도</b><p>재질, 기능, 배터리·액체 포함 여부를 함께 알려주세요.</p></div>
+<div class="kb-visual-card"><b>박스 수와 포장 크기</b><p>실중량과 부피무게를 비교해 운임이 산정됩니다.</p></div>
+<div class="kb-visual-card"><b>희망 도착 일정</b><p>긴급도에 따라 적합한 서비스가 달라질 수 있습니다.</p></div>
+</div>
+</section>
+<section class="kb-tags">
+<strong>추천 태그</strong><br/>
+<span>#해외특송</span><span>#국제특송</span><span>#해외배송</span><span>#DHL</span><span>#FedEx</span><span>#UPS</span><span>#EMS</span><span>#인보이스작성</span><span>#CommercialInvoice</span><span>#해외통관</span><span>#관부가세</span><span>#수출샘플</span><span>#케이브릿지</span>
+</section>
+</article>
+<footer class="kb-main-footer">
+<div class="kb-main-wrap">
+<div class="kb-main-footer-top">
+<div>
+<a class="kb-main-footer-brand" href="../index.html">
+<img alt="KBRIDGE 아이콘" src="../assets/kbridge-icon.png"/>
+<span>KBRIDGE</span>
+</a>
+<p class="kb-main-footer-desc">케이브릿지가 운영하는 해외특송 서비스</p>
+</div>
+<div class="kb-main-footer-contact">
+<div class="kb-main-footer-contact-title">문의</div>
+<a href="https://pf.kakao.com/_baLgb/chat" rel="noopener" target="_blank">실시간 문의</a>
+<a href="mailto:all@kbridges.co.kr">all@kbridges.co.kr</a>
+</div>
+</div>
+<div class="kb-main-footer-divider"></div>
+<div class="kb-main-footer-bottom">
+<div class="kb-main-footer-company">
+          케이브릿지 주식회사 (KBRIDGE CO.,LTD) · 대표이사 김형진 · 사업자등록번호 548-88-02435<br/>
+          본사 : 부산광역시 동구 조방로17 5층 501호<br/>
+<a href="https://kbridges.co.kr/policy/private" rel="noopener noreferrer" target="_blank">개인정보처리방침</a>
+</div>
+<div class="kb-main-footer-copy">© 2026 KBRIDGE CO.,LTD. All rights reserved.</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
