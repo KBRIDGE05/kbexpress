@@ -278,14 +278,14 @@
     }
 
   
-    .blog-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .blog-thumb img{width:100%;height:100%;object-fit:cover;display:block;background:#eef8fc}
     .blog-hero-image{width:100%;border-radius:24px;overflow:hidden;border:1px solid #dbeaf1;box-shadow:0 18px 48px rgba(16,39,58,.08);margin:22px 0 0}
     .blog-hero-image img{width:100%;display:block}
 
   
     .blog-thumb{
       height:auto !important;
-      aspect-ratio:1200/630;
+      aspect-ratio:1/1;
       padding:0 !important;
       align-items:stretch !important;
       background:#eef8fc !important;
@@ -357,7 +357,7 @@ img{max-width:100%;height:auto}
   .blog-head{display:block !important}
   .blog-list{grid-template-columns:1fr !important;gap:14px !important}
   .blog-card{min-height:auto !important;border-radius:20px !important}
-  .blog-thumb{height:auto !important;aspect-ratio:1200/630 !important}
+  .blog-thumb{height:auto !important;aspect-ratio:1/1 !important}
   .cta{display:block !important;padding:20px !important}
   .footer{padding:30px 0 18px !important}
 }
@@ -463,18 +463,41 @@ img{max-width:100%;height:auto}
       }
     }
 
-  </style>
+  
+
+    /* ===== Quote attachment field ===== */
+    .attachment-box{grid-column:1/-1;display:flex;flex-direction:column;gap:8px}
+    .attachment-box label{font-size:13px;font-weight:950;color:#10273a}
+    .attachment-box input[type="file"]{width:100%;min-height:64px;height:auto;padding:14px 16px;border:1px solid #cfe3ee;border-radius:16px;background:#f5faff;color:#10273a;cursor:pointer}
+    .attachment-help{font-size:12.5px;line-height:1.65;color:#617789}
+    .attachment-list{display:grid;gap:7px;margin-top:2px}
+    .attachment-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 11px;border:1px solid #dfedf4;border-radius:12px;background:#fff;font-size:12.5px;color:#31485a}
+    .attachment-item button{flex:0 0 auto;border:0;border-radius:999px;padding:5px 9px;background:#eef6fa;color:#0b6ea8;font-size:11px;font-weight:900;cursor:pointer}
+    .attachment-status{font-size:12px;font-weight:850;color:#0b6ea8}
+
+    @media(max-width:760px){
+      #latestBlogGrid.blog-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+      #latestBlogGrid .blog-card{min-width:0!important;min-height:0!important;border-radius:14px!important;box-shadow:0 8px 20px rgba(16,39,58,.08)!important}
+      #latestBlogGrid .blog-thumb{aspect-ratio:1/1!important;border-radius:0!important}
+      #latestBlogGrid .blog-body{padding:9px!important;gap:6px!important}
+      #latestBlogGrid .blog-meta{font-size:9px!important;line-height:1.25!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+      #latestBlogGrid .blog-title{font-size:12px!important;line-height:1.3!important;letter-spacing:-.045em!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
+      #latestBlogGrid .blog-excerpt{display:none!important}
+      #latestBlogGrid .blog-read{min-height:28px!important;padding:0 8px!important;font-size:10px!important;white-space:nowrap!important}
+      .attachment-box input[type="file"]{font-size:14px!important;min-height:58px!important}
+    }
+
+</style>
 <style id="kb-official-logo-mobile-fix">
   .brand-icon{width:138px!important;height:auto!important;object-fit:contain!important;flex:0 0 auto!important;}
   .logo{gap:0!important;}
   .brand-copy,.logo-text{display:none!important;}
   .footer-brand .brand-icon{width:128px!important;height:auto!important;}
-  .blog-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .blog-thumb img{width:100%;height:100%;object-fit:cover;display:block;background:#eef8fc;}
   @media(max-width:760px){
     .brand-icon{width:112px!important;}
     .footer-brand .brand-icon{width:112px!important;}
-    .blog-grid{grid-template-columns:1fr!important;}
-    .blog-thumb{aspect-ratio:1200/630!important;height:auto!important;}
+    .blog-thumb{aspect-ratio:1/1!important;height:auto!important;}
   }
 </style>
 </head>
@@ -487,7 +510,7 @@ img{max-width:100%;height:auto}
 <a href="#blog">블로그</a><a href="#check">문의 전 확인사항</a><a href="#compare">운송 방식 비교</a><a href="#process">진행 절차</a><a href="#contact">실시간 문의</a></div>
 <button aria-label="메뉴 열기" class="hamb" id="hamb"><span></span></button>
 </nav>
-<div class="mobile-menu" id="mobileMenu"><a href="#quote">견적문의</a><a href="#blog">블로그</a><a href="#check">문의 전 확인사항</a><a href="#compare">운송 방식 비교</a><a href="#process">진행 절차</a><a href="#contact">실시간 문의</a></div>
+<div class="mobile-menu" id="mobileMenu"><a href="#quote">견적문의</a><a href="#blog">블로그</a><a href="#blog">블로그</a><a href="#check">문의 전 확인사항</a><a href="#compare">운송 방식 비교</a><a href="#process">진행 절차</a><a href="#contact">실시간 문의</a></div>
 </div>
 </header>
 <main>
@@ -547,6 +570,13 @@ img{max-width:100%;height:auto}
 <div class="field"><label for="readyDate">발송 희망일</label><input id="readyDate" type="date"/></div>
 <div class="field full"><label>박스 사이즈 CM</label><div class="inline"><input id="length" min="0" placeholder="가로" step="1" type="number"/><input id="width" min="0" placeholder="세로" step="1" type="number"/><input id="height" min="0" placeholder="높이" step="1" type="number"/></div><small>박스가 여러 종류라면 문의 내용에 각각 기재해주세요.</small></div>
 <div class="field full"><label for="memo">추가 문의 내용</label><textarea id="memo" placeholder="예: DHL/FedEx/UPS 중 가능한 특송사 비교 희망, 수취인이 세금 납부 예정, 배터리 포함 여부 등" rows="5"></textarea></div>
+<div class="attachment-box">
+  <label for="attachments">제품 사진 · 사양서 · 태그(라벨) 사진 <span style="font-weight:700;color:#7b8f9f">(선택)</span></label>
+  <input id="attachments" type="file" accept="image/*,.pdf,application/pdf" multiple>
+  <div class="attachment-help">제품 사진, 사양서, 태그·라벨 사진을 첨부하면 규격·재질을 더 빠르게 확인할 수 있습니다. 이미지·PDF, 최대 6개 / 합계 15MB까지.</div>
+  <div class="attachment-list" id="attachmentList"></div>
+  <div class="attachment-status" id="attachmentStatus"></div>
+</div>
 </div></form>
 <div class="action-row"><button class="btn primary" form="quoteForm" id="submitBtn" type="submit">견적문의 접수하기</button><button class="btn dark" id="copyBtn" type="button">문의 내용 복사</button></div><div class="submit-status" id="submitStatus"></div>
 </div>
@@ -644,6 +674,77 @@ img{max-width:100%;height:auto}
     function val(id){ return (el(id)?.value || '').trim() || '-'; }
 
 
+    const MAX_ATTACHMENT_COUNT = 6;
+    const MAX_ATTACHMENT_TOTAL = 15 * 1024 * 1024;
+    let selectedAttachments = [];
+
+    function formatBytes(bytes){
+      if(bytes < 1024) return bytes + ' B';
+      if(bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+      return (bytes / 1024 / 1024).toFixed(1) + ' MB';
+    }
+
+    function renderAttachmentList(){
+      const list = el('attachmentList');
+      const status = el('attachmentStatus');
+      if(!list || !status) return;
+      list.innerHTML = selectedAttachments.map((file, index) => `
+        <div class="attachment-item">
+          <span>${file.name} · ${formatBytes(file.size)}</span>
+          <button type="button" data-remove-attachment="${index}">삭제</button>
+        </div>
+      `).join('');
+      const total = selectedAttachments.reduce((sum, file) => sum + file.size, 0);
+      status.textContent = selectedAttachments.length ? `${selectedAttachments.length}개 선택 · 총 ${formatBytes(total)}` : '';
+      list.querySelectorAll('[data-remove-attachment]').forEach(button => {
+        button.addEventListener('click', () => {
+          selectedAttachments.splice(Number(button.dataset.removeAttachment), 1);
+          renderAttachmentList();
+        });
+      });
+    }
+
+    el('attachments')?.addEventListener('change', event => {
+      const incoming = Array.from(event.target.files || []);
+      const merged = [...selectedAttachments, ...incoming];
+      const allowed = merged.filter(file => file.type.startsWith('image/') || file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf'));
+      if(allowed.length !== merged.length){
+        setStatus('이미지 또는 PDF 파일만 첨부할 수 있습니다.', true);
+      }
+      const limited = allowed.slice(0, MAX_ATTACHMENT_COUNT);
+      const total = limited.reduce((sum, file) => sum + file.size, 0);
+      if(allowed.length > MAX_ATTACHMENT_COUNT){
+        setStatus('첨부파일은 최대 6개까지 선택할 수 있습니다.', true);
+      }
+      if(total > MAX_ATTACHMENT_TOTAL){
+        setStatus('첨부파일 합계는 15MB를 넘을 수 없습니다.', true);
+        event.target.value = '';
+        return;
+      }
+      selectedAttachments = limited;
+      event.target.value = '';
+      renderAttachmentList();
+    });
+
+    function fileToBase64(file){
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(String(reader.result).split(',')[1] || '');
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    async function buildAttachmentPayload(){
+      return Promise.all(selectedAttachments.map(async file => ({
+        name: file.name,
+        mimeType: file.type || 'application/octet-stream',
+        size: file.size,
+        data: await fileToBase64(file)
+      })));
+    }
+
+
     
 function loadLatestBlogPosts(){
   const grid = document.getElementById('latestBlogGrid');
@@ -672,7 +773,7 @@ function loadLatestBlogPosts(){
   }
   function render(posts){
     const list = Array.isArray(posts) && posts.length ? posts : fallbackPosts;
-    grid.innerHTML = list.slice(0, 2).map(post => {
+    grid.innerHTML = list.slice(0, 3).map(post => {
       const url = rootPath(post.url);
       const thumb = rootPath(post.thumbnail);
       return `
@@ -722,6 +823,7 @@ loadLatestBlogPosts();
       `박스 사이즈: ${val('length')} x ${val('width')} x ${val('height')} CM\n`+
       `인보이스 금액: ${val('value')}\n\n`+
       `■ 추가 문의 내용\n${val('memo')}\n\n`+
+      `■ 첨부파일\n${selectedAttachments.length ? selectedAttachments.map(file => file.name).join(', ') : '-'}\n\n`+
       `※ 제품 사진, 인보이스, 패킹리스트, MSDS/성분표가 있으면 추가 확인이 필요할 수 있습니다.`;
     }
 
@@ -731,7 +833,8 @@ loadLatestBlogPosts();
       return `케이브릿지 해외특송 견적문의${c}${country}`;
     }
 
-    function makePayload(){
+    async function makePayload(){
+      const attachments = await buildAttachmentPayload();
       return {
         subject: makeSubject(),
         body: makeBody(),
@@ -751,7 +854,8 @@ loadLatestBlogPosts();
         width: val('width'),
         height: val('height'),
         memo: val('memo'),
-        submittedAt: new Date().toLocaleString('ko-KR')
+        submittedAt: new Date().toLocaleString('ko-KR'),
+        attachments
       };
     }
 
@@ -791,7 +895,7 @@ loadLatestBlogPosts();
       submitBtn.textContent = '접수 중...';
       setStatus('견적 문의를 접수하고 있습니다.');
 
-      const payload = makePayload();
+      const payload = await makePayload();
 
       try{
         await fetch(GOOGLE_SCRIPT_URL, {
