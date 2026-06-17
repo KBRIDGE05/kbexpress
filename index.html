@@ -1,15 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>케이브릿지 KBRIDGE | 해외특송 견적문의</title>
-  <meta name="description" content="해외특송, 샘플 발송, 긴급화물, 수출입 특송 견적 정보를 입력하면 케이브릿지 이메일 문의로 바로 연결됩니다." />
-  <meta name="keywords" content="케이브릿지,KBRIDGE,해외특송 견적문의,국제특송,DHL,FedEx,UPS,EMS,샘플발송,긴급화물,특송 문의" />
-  <meta property="og:title" content="케이브릿지 해외특송 견적문의" />
-  <meta property="og:description" content="국가, 품목, 중량, 박스 사이즈를 입력하고 이메일로 바로 견적을 문의하세요." />
-  <meta property="og:type" content="website" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>케이브릿지 해외특송 서비스</title>
+<meta content="해외특송, 샘플 발송, 긴급화물, 수출입 특송 견적 정보를 입력하면 케이브릿지 이메일 문의로 바로 연결됩니다." name="description"/>
+<meta content="케이브릿지,KBRIDGE,해외특송 견적문의,국제특송,DHL,FedEx,UPS,EMS,샘플발송,긴급화물,특송 문의" name="keywords"/>
+<meta content="케이브릿지 해외특송 서비스" property="og:title"/>
+<meta content="국가, 품목, 중량, 박스 사이즈를 입력하고 이메일로 바로 견적을 문의하세요." property="og:description"/>
+<meta content="website" property="og:type"/>
+<style>
     :root{--bg:#f6fbff;--bg2:#eef8fd;--ink:#0d2236;--text:#31485a;--muted:#6f8394;--line:#d9ebf4;--card:#fff;--brand:#0b6ea8;--brand2:#17bfd6;--navy:#06253b;--sky:#e9f8fd;--green:#24b883;--orange:#ffb44d;--red:#ef6d6d;--shadow:0 18px 55px rgba(9,61,96,.11);--shadow2:0 10px 26px rgba(9,61,96,.08);--radius:26px}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR","Apple SD Gothic Neo","Segoe UI",Arial,sans-serif;background:#fff;color:var(--ink);font-size:15px;line-height:1.65;letter-spacing:-.035em;word-break:keep-all}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}h1,h2,h3,p{margin:0}.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
     .topbar{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.9);backdrop-filter:blur(18px);border-bottom:1px solid rgba(217,235,244,.9)}
@@ -36,18 +37,19 @@
     .check-row{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
     .check-row span{display:flex;align-items:center;gap:8px;border-radius:14px;background:#f6fbff;border:1px solid #e1eef5;padding:10px 11px;font-size:12.5px;font-weight:900;color:#31485a}
     .check-row span:before{content:"✓";display:inline-grid;place-items:center;width:19px;height:19px;border-radius:50%;background:linear-gradient(135deg,#0b6ea8,#17bfd6);color:#fff;font-size:11px;font-weight:950}
-    .panel-note{position:relative;z-index:2;margin-top:12px;border-radius:18px;background:#fff8e8;border:1px solid #ffe0a8;color:#7b5314;padding:12px 14px;font-size:12.5px;font-weight:850;line-height:1.55}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;margin-bottom:0}
+    .panel-note{position:relative;z-index:2;margin-top:12px;border-radius:18px;background:#fff8e8;border:1px solid #ffe0a8;color:#7b5314;padding:12px 14px;font-size:12.5px;font-weight:850;line-height:1.55}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;margin-bottom:0}.mini-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:26px}.mini-item{display:flex;align-items:center;gap:9px;background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:16px;padding:11px;box-shadow:0 10px 26px rgba(10,58,90,.05)}.mini-ico{width:34px;height:34px;border-radius:13px;background:var(--sky);display:grid;place-items:center;color:var(--brand);font-weight:950}.mini-item b{display:block;font-weight:950;color:#10273a}.mini-item span{display:block;font-size:12px;font-weight:760;color:#6d8190;line-height:1.35}
     .section{padding:62px 0}.section.soft{background:linear-gradient(180deg,#fff,var(--bg))}.section.dark{background:linear-gradient(135deg,#061f32,#0b3857);color:#fff}.head{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-bottom:28px}.head h2{margin-top:11px;font-size:clamp(28px,3.4vw,45px);line-height:1.15;letter-spacing:-.065em;font-weight:950}.lead{max-width:560px;color:#617789}.dark .lead{color:rgba(255,255,255,.72)}
     .quote-section{padding-top:0}.quote-shell{background:rgba(255,255,255,.97);border:1px solid #d5ebf6;border-radius:34px;box-shadow:0 28px 80px rgba(9,61,96,.16);overflow:hidden}.quote-head{padding:14px 20px;background:linear-gradient(100deg,#06253b,#0b6ea8 58%,#17bfd6);color:#fff;display:flex;justify-content:space-between;align-items:flex-start;gap:18px}.quote-head h2{font-size:22px;line-height:1.2;letter-spacing:-.05em}.quote-head p{margin-top:4px;color:rgba(255,255,255,.82);font-size:13px}.badge{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);font-size:12px;font-weight:950;white-space:nowrap}.quote-body{padding:16px 18px;background:#fff}
-    .form-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px 10px}.field{display:flex;flex-direction:column;gap:4px}.field.full{grid-column:1/-1}.field label{font-size:11px;font-weight:950;color:#263f53}.field input,.field select,.field textarea{width:100%;border:1px solid #d8e9f2;border-radius:10px;background:#f8fcff;color:#10273a;padding:6px 10px;min-height:34px;height:34px;outline:none;transition:.18s;font-size:14px}.field input:focus,.field select:focus,.field textarea:focus{border-color:#68cce1;background:#fff;box-shadow:0 0 0 4px rgba(23,191,214,.12)}.field small{color:#7b8d9d;font-size:11.5px;font-weight:760}.inline{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-    .action-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.submit-status{margin-top:10px;font-size:12.5px;font-weight:850;color:#0b6ea8}.btn:disabled{opacity:.62;cursor:not-allowed;transform:none;box-shadow:none}
+    .form-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px 10px}.field{display:flex;flex-direction:column;gap:4px}.field.full{grid-column:1/-1}.field label{font-size:11px;font-weight:950;color:#263f53}.field input,.field select,.field textarea{width:100%;border:1px solid #d8e9f2;border-radius:10px;background:#f8fcff;color:#10273a;padding:6px 10px;min-height:34px;height:34px;outline:none;transition:.18s;font-size:14px}.field input:focus,.field select:focus,.field textarea:focus{border-color:#68cce1;background:#fff;box-shadow:0 0 0 4px rgba(23,191,214,.12)}.field small{color:#7b8d9d;font-size:11.5px;font-weight:760}.inline{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.segmented{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.segmented input{position:absolute;opacity:0}.segmented label{border:1px solid #d8e9f2;border-radius:10px;padding:7px 10px;min-height:34px;display:flex;align-items:center;justify-content:center;text-align:center;background:#f8fcff;cursor:pointer;font-weight:950;color:#496174}.segmented input:checked+label{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border-color:transparent}.notice{margin-top:8px;padding:9px 11px;border-radius:17px;background:#fff8e8;border:1px solid #ffe0a8;color:#7b5314;font-size:12.5px;font-weight:850}
+    .mail-preview{margin-top:18px;border-radius:22px;border:1px solid #d9ecf5;background:linear-gradient(180deg,#f8fcff,#fff);box-shadow:var(--shadow2);overflow:hidden}.mail-preview-head{padding:16px 18px;border-bottom:1px solid #e5f1f7;display:flex;justify-content:space-between;gap:12px;align-items:center}.mail-preview-head b{font-size:16px}.mail-preview-head span{font-size:12px;font-weight:950;color:var(--brand);background:#eaf8fd;border:1px solid #cbeaf5;border-radius:999px;padding:7px 10px}.preview-text{padding:16px 18px;white-space:pre-wrap;font-size:12.5px;color:#344b5d;max-height:230px;overflow:auto}.action-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.submit-status{margin-top:10px;font-size:12.5px;font-weight:850;color:#0b6ea8}.btn:disabled{opacity:.62;cursor:not-allowed;transform:none;box-shadow:none}
     .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow2)}.card .num{display:inline-flex;width:40px;height:40px;border-radius:15px;background:var(--sky);color:var(--brand);align-items:center;justify-content:center;font-weight:950}.card h3{margin-top:15px;font-size:20px;letter-spacing:-.045em}.card p{margin-top:9px;color:#617789;font-size:14px}
     .compare{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.panel{background:#fff;border:1px solid var(--line);border-radius:26px;padding:24px;box-shadow:var(--shadow2)}.table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid #e0edf4;border-radius:20px}.table th,.table td{padding:14px 13px;border-bottom:1px solid #e8f1f7;text-align:left;font-size:13.5px}.table th{background:#f4fbff;color:#173349;font-weight:950}.table tr:last-child td{border-bottom:0}.checklist{display:grid;gap:12px}.check{display:flex;gap:12px;padding:14px;border:1px solid #e1eef5;background:#f9fdff;border-radius:18px}.check i{flex:0 0 28px;width:28px;height:28px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;display:grid;place-items:center;font-style:normal;font-weight:950;font-size:12px}.check b{display:block;font-weight:950}.check span{display:block;color:#627789;font-size:13px;margin-top:3px}
     .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:24px}.step small{display:inline-flex;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.11);color:#8de9f8;font-weight:950}.step h3{margin-top:13px;font-size:19px}.step p{margin-top:9px;color:rgba(255,255,255,.75);font-size:14px}
     .cta{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:28px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.08);border-radius:28px}.cta h2{font-size:34px;line-height:1.08;letter-spacing:-.06em}.cta p{margin-top:10px;color:rgba(255,255,255,.76);max-width:620px}
     .footer{padding:34px 0 16px;background:#041a2a;color:#a9c0d3}
     .footer-top{display:grid;grid-template-columns:1.45fr .65fr;gap:48px;align-items:flex-start}
-    .footer-brand{display:flex;align-items:center;gap:14px;font-weight:950;color:#fff;margin-bottom:18px}.footer-brand .brand-icon{width:50px;height:50px;flex:0 0 50px}.footer-brand .brand-copy{display:flex;flex-direction:column;align-items:flex-start;font-size:22px;font-weight:950;letter-spacing:-.03em;color:#fff;line-height:1.08}
+    .footer-brand{display:flex;align-items:center;gap:14px;font-weight:950;color:#fff;margin-bottom:18px}.footer-brand .brand-icon{width:50px;height:50px;flex:0 0 50px}.footer-brand .brand-copy{display:flex;align-items:center;font-size:22px;font-weight:950;letter-spacing:-.03em;color:#fff}
+    .footer-brand .brand-copy{display:flex;flex-direction:column;line-height:1.08}
     .footer-brand strong{font-size:19px;font-weight:950;letter-spacing:-.03em}
     .footer-brand small{font-size:12px;font-weight:900;color:#d6edfa;margin-top:6px}
     .footer-desc{max-width:720px;font-size:14px;line-height:1.8;color:#d6e5ef}
@@ -59,7 +61,7 @@
     .footer-company .policy-link{position:relative;z-index:20;cursor:pointer;pointer-events:auto;color:#fff;font-weight:950}
     .footer-copy{font-size:12.5px;color:#b8cbd9;white-space:nowrap}
     .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease, transform .6s ease}.reveal.show{opacity:1;transform:none}.delay1{transition-delay:.08s}.delay2{transition-delay:.16s}.delay3{transition-delay:.24s}
-    .field textarea{height:62px;min-height:62px;resize:vertical}@media (max-width:1100px){.hero-inner{grid-template-columns:1fr}.form-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}.mini-meta{grid-template-columns:repeat(2,1fr)}}
+    .field textarea{height:62px;min-height:62px;resize:vertical}@media (max-width:1100px){.hero-inner{grid-template-columns:1fr}.express-visual{min-height:360px}.hero-plane-image{max-height:340px}.form-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}.mini-meta{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:860px){.brand-icon{width:34px;height:34px;flex-basis:34px}.logo-text{font-size:16px}.footer-brand .brand-icon{width:42px;height:42px;flex-basis:42px}.footer-brand .brand-copy{font-size:20px}.express-flow,.check-row{grid-template-columns:1fr}.express-panel{padding:20px}.panel-title{display:block}.panel-badge{display:inline-flex;margin-top:12px}.menu{display:none}.hamb{display:flex}.mobile-menu.open{display:block;padding:0 0 14px}.head,.compare,.cta{grid-template-columns:1fr;display:grid}.footer-top,.footer-bottom{grid-template-columns:1fr;display:grid}.footer-copy{white-space:normal}.card-grid,.process-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(34px,10vw,54px)}.mini-meta{grid-template-columns:1fr}.form-grid,.inline{grid-template-columns:1fr}.quote-head{flex-direction:column;align-items:flex-start}.wrap{width:min(100% - 28px,1180px)}}
   
     .success-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(3,18,31,.52);backdrop-filter:blur(8px)}
@@ -69,6 +71,9 @@
     .success-box h3{font-size:24px;line-height:1.25;letter-spacing:-.055em;margin:0}
     .success-box p{margin-top:12px;color:#526b7f;font-size:14px;line-height:1.7}
     .success-box .btn{margin-top:20px;min-width:132px}
+        @media(max-width:900px){
+      .blog-article-head h3{font-size:23px}
+    }
 
   
     .blog-section{
@@ -225,6 +230,43 @@
       font-weight:950;
       text-decoration:none;
     }
+    .blog-write-guide{
+      margin-top:22px;
+      border:1px solid #d8e9f2;
+      border-radius:24px;
+      background:#f7fbfe;
+      padding:22px;
+      display:grid;
+      grid-template-columns:1.05fr 1fr;
+      gap:18px;
+      align-items:center;
+    }
+    .blog-write-guide h3{
+      margin:0 0 8px;
+      font-size:22px;
+      letter-spacing:-.055em;
+      color:#10273a;
+    }
+    .blog-write-guide p{
+      margin:0;
+      color:#5d7181;
+      line-height:1.7;
+      font-size:14px;
+    }
+    .blog-checks{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:10px;
+    }
+    .blog-checks div{
+      background:#ffffff;
+      border:1px solid #e0eef5;
+      border-radius:16px;
+      padding:12px;
+      font-size:13px;
+      color:#31516b;
+      font-weight:850;
+    }
     @media(max-width:900px){
       .blog-section{padding:58px 0}
       .blog-head{display:block}
@@ -257,167 +299,344 @@
       background:#eef8fc;
     }
 
+  
+
+/* ===== KBRIDGE MOBILE CLEAN FINAL v20260609 ===== */
+img{max-width:100%;height:auto}
+@media (max-width: 760px){
+  body{font-size:14.5px;line-height:1.72;overflow-x:hidden}
+  .wrap,.kb-main-wrap,.container{width:min(100% - 28px, 1180px) !important;margin-left:auto !important;margin-right:auto !important}
+  .kb-main-topbar{position:sticky;top:0;z-index:999;background:rgba(255,255,255,.96);backdrop-filter:blur(16px)}
+  .kb-main-nav{height:auto !important;min-height:62px !important;padding:10px 0 !important;display:flex !important;align-items:flex-start !important;gap:8px !important;flex-direction:column !important}
+  .kb-main-logo{gap:8px !important;min-height:36px !important}
+  .kb-main-logo img{width:32px !important;height:32px !important;flex:0 0 32px !important;object-fit:contain !important}
+  .kb-main-logo span{font-size:16px !important;line-height:1.1 !important}
+  .kb-main-menu{width:100% !important;margin-left:0 !important;display:flex !important;gap:8px !important;overflow-x:auto !important;white-space:nowrap !important;padding:2px 0 4px !important;-webkit-overflow-scrolling:touch !important;scrollbar-width:none !important}
+  .kb-main-menu::-webkit-scrollbar{display:none !important}
+  .kb-main-menu a{flex:0 0 auto !important;font-size:12px !important;padding:6px 8px !important;border:1px solid #e1eef5 !important;border-radius:999px !important;background:#fff !important}
+  .kb-main-footer{padding:28px 0 18px !important}
+  .kb-main-footer-top,.kb-main-footer-bottom{display:grid !important;grid-template-columns:1fr !important;gap:18px !important}
+  .kb-main-footer-brand img{width:38px !important;height:38px !important;flex:0 0 38px !important}
+  .kb-main-footer-brand span{font-size:18px !important}
+  .kb-main-footer-copy{white-space:normal !important;font-size:12px !important}
+}
+@media (max-width: 480px){
+  .btn,.read-btn,.blog-filter{min-height:38px !important;padding:8px 12px !important;font-size:12.5px !important}
+}
+
+  
+
+/* ===== main page mobile layout cleanup ===== */
+@media (max-width: 760px){
+  .topbar{position:sticky;top:0;z-index:999;background:rgba(255,255,255,.96);backdrop-filter:blur(16px)}
+  .nav{height:auto !important;min-height:62px !important;padding:10px 0 !important;flex-wrap:wrap !important;gap:8px !important}
+  .logo{gap:8px !important}
+  .brand-icon{width:32px !important;height:32px !important;flex:0 0 32px !important}
+  .logo-text{font-size:16px !important}
+  .menu{display:flex !important;width:100% !important;margin-left:0 !important;gap:8px !important;overflow-x:auto !important;white-space:nowrap !important;padding:2px 0 4px !important;scrollbar-width:none !important}
+  .menu::-webkit-scrollbar{display:none !important}
+  .menu a{flex:0 0 auto !important;font-size:12px !important;padding:6px 8px !important;border:1px solid #e1eef5 !important;border-radius:999px !important;background:#fff !important}
+  .hamb,.mobile-menu{display:none !important}
+  .hero{padding:44px 0 34px !important}
+  .hero-inner{grid-template-columns:1fr !important;gap:24px !important}
+  .hero h1{font-size:clamp(32px,9.8vw,46px) !important;line-height:1.08 !important}
+  .hero p{font-size:14.5px !important;line-height:1.72 !important}
+  .express-panel{min-height:auto !important;border-radius:24px !important;padding:18px !important}
+  .express-flow,.check-row,.mini-meta,.form-grid,.inline,.segmented,.card-grid,.compare,.process-grid{grid-template-columns:1fr !important}
+  .quote-shell{border-radius:24px !important}
+  .quote-head{padding:16px !important;flex-direction:column !important;gap:8px !important}
+  .quote-body{padding:16px !important}
+  .field input,.field select,.field textarea{font-size:16px !important;min-height:42px !important;height:42px !important}
+  .field textarea{height:86px !important;min-height:86px !important}
+  .section{padding:46px 0 !important}
+  .head{display:block !important;margin-bottom:20px !important}
+  .head h2{font-size:28px !important;line-height:1.18 !important}
+  .lead{font-size:14px !important;margin-top:10px !important}
+  .blog-section{padding:48px 0 !important}
+  .blog-section .container{width:min(100% - 28px,1180px) !important}
+  .blog-head{display:block !important}
+  .blog-list{grid-template-columns:1fr !important;gap:14px !important}
+  .blog-card{min-height:auto !important;border-radius:20px !important}
+  .blog-thumb{height:auto !important;aspect-ratio:1200/630 !important}
+  .cta{display:block !important;padding:20px !important}
+  .footer{padding:30px 0 18px !important}
+}
+
+  
+/* ===== Blog card hover lift effect only ===== */
+.blog-card{
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.blog-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 28px 80px rgba(16,39,58,.16);
+  border-color:#b8ddea;
+}
+.blog-card:hover .blog-read{
+  background:#10273a;
+  color:#ffffff;
+}
+.blog-filter{
+  transition:transform .22s ease, box-shadow .22s ease;
+}
+.blog-filter:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 42px rgba(16,39,58,.18);
+}
+
+    /* ===== Floating Contact / Top Buttons ===== */
+    .floating-actions{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:9900;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      align-items:flex-end;
+    }
+    .float-contact,
+    .top-btn{
+      min-width:118px;
+      height:46px;
+      border:0;
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:7px;
+      color:#fff;
+      font-size:13px;
+      font-weight:950;
+      letter-spacing:-.035em;
+      box-shadow:0 16px 38px rgba(9,61,96,.22);
+      cursor:pointer;
+      transition:transform .22s ease, box-shadow .22s ease, opacity .22s ease, visibility .22s ease;
+    }
+    .float-contact:hover,
+    .top-btn:hover{
+      transform:translateY(-4px);
+      box-shadow:0 22px 48px rgba(9,61,96,.30);
+    }
+    .float-contact.email{
+      background:linear-gradient(135deg,#10273a,#0b6ea8);
+    }
+    .float-contact.kakao{
+      background:linear-gradient(135deg,#f9df32,#ffd84d);
+      color:#2c2612;
+    }
+    .top-btn{
+      width:54px;
+      min-width:54px;
+      height:54px;
+      border-radius:50%;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      font-size:12px;
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(12px);
+    }
+    .top-btn.show{
+      opacity:1;
+      visibility:visible;
+      transform:translateY(0);
+    }
+    .float-contact:focus-visible,
+    .top-btn:focus-visible{
+      outline:3px solid rgba(23,191,214,.35);
+      outline-offset:4px;
+    }
+    @media(max-width:760px){
+      .floating-actions{
+        right:14px;
+        bottom:14px;
+        gap:8px;
+      }
+      .float-contact{
+        display:none !important;
+      }
+      .top-btn{
+        width:46px;
+        min-width:46px;
+        height:46px;
+        font-size:11px;
+      }
+    }
+
   </style>
+<style id="kb-official-logo-mobile-fix">
+  .brand-icon{width:138px!important;height:auto!important;object-fit:contain!important;flex:0 0 auto!important;}
+  .logo{gap:0!important;}
+  .brand-copy,.logo-text{display:none!important;}
+  .footer-brand .brand-icon{width:128px!important;height:auto!important;}
+  .blog-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  @media(max-width:760px){
+    .brand-icon{width:112px!important;}
+    .footer-brand .brand-icon{width:112px!important;}
+    .blog-grid{grid-template-columns:1fr!important;}
+    .blog-thumb{aspect-ratio:1200/630!important;height:auto!important;}
+  }
+</style>
 </head>
 <body>
-  <header class="topbar" id="top">
-    <div class="wrap">
-      <nav class="nav">
-        <a class="logo" href="#top" aria-label="KBRIDGE 홈"><img class="brand-icon" src="assets/kbridge-icon.png" alt="KBRIDGE 아이콘"><span class="logo-text">KBRIDGE</span></a>
-        <div class="menu"><a href="#quote">견적문의</a>
-          <a href="#blog">블로그</a><a href="#check">문의 전 확인사항</a><a href="#compare">운송 방식 비교</a><a href="#process">진행 절차</a><a href="#contact">실시간 문의</a></div>
-        <button class="hamb" id="hamb" aria-label="메뉴 열기"><span></span></button>
-      </nav>
-      <div class="mobile-menu" id="mobileMenu"><a href="#quote">견적문의</a><a href="#blog">블로그</a><a href="#check">문의 전 확인사항</a><a href="#compare">운송 방식 비교</a><a href="#process">진행 절차</a><a href="#contact">실시간 문의</a></div>
-    </div>
-  </header>
-  <main>
-    <section class="hero">
-      <div class="wrap hero-inner">
-        <div class="hero-copy reveal show">
-          <div class="eyebrow">KBRIDGE EXPRESS SERVICE</div>
-          <h1>해외특송 견적문의<br><span class="accent">빠르게 접수하세요</span></h1>
-          <p>샘플 발송, 긴급 소량화물, 기업 수출입 특송까지 국가·품목·중량·박스 정보를 남겨주시면 케이브릿지가 특송 가능 여부와 실제 견적을 확인해 회신드립니다.</p>
-          <div class="hero-actions"><a class="btn primary" href="#quote">견적문의 작성하기</a><a class="btn ghost" href="#check">문의 전 확인사항</a></div>
-        </div>
-        <div class="express-panel reveal delay1" aria-label="해외특송 문의 안내 패널">
-          <div class="panel-title">
-            <div>
-              <h2>특송 견적은<br>정보가 정확할수록 빠릅니다.</h2>
-              <p>품목 제한, 부피중량, 도착국 통관 조건을 함께 확인해 실제 진행 가능한 견적을 안내합니다.</p>
-            </div>
-            <span class="panel-badge">EXPRESS QUOTE</span>
-          </div>
-
-          <div class="express-flow">
-            <div class="flow-card"><small>01</small><b>문의 접수</b><span>국가·품목·중량 입력</span></div>
-            <div class="flow-card"><small>02</small><b>가능 여부 검토</b><span>특송 제한 품목 확인</span></div>
-            <div class="flow-card"><small>03</small><b>견적 회신</b><span>운송사·일정 안내</span></div>
-          </div>
-
-          <div class="panel-check">
-            <h3>견적 문의 전 준비하면 좋은 정보</h3>
-            <div class="check-row">
-              <span>정확한 품명 / 재질 / 용도</span>
-              <span>박스 포함 실제중량</span>
-              <span>박스 가로·세로·높이</span>
-              <span>인보이스 금액</span>
-              <span>도착 국가 / 도시 / 우편번호</span>
-              <span>배터리·액체·식품 포함 여부</span>
-            </div>
-          </div>
-
-          <div class="panel-note">배터리, 액체류, 식품, 화장품, 위험물 가능성이 있는 품목은 사전 검토 후 접수가 가능합니다.</div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section quote-section" id="quote">
-      <div class="wrap">
-        <div class="quote-shell reveal show">
-          <div class="quote-head"><div><h2>해외특송 견적문의</h2><p>아래 정보를 입력한 뒤 ‘견적문의 접수하기’를 누르면 케이브릿지 담당자에게 접수됩니다.</p></div><span class="badge">견적문의 접수</span></div>
-          <div class="quote-body">
-            <form id="quoteForm"><div class="form-grid">
-              <div class="field"><label for="company">회사명</label><input id="company" placeholder="예: 케이브릿지" autocomplete="organization"></div>
-              <div class="field"><label for="name">담당자명</label><input id="name" placeholder="예: 홍길동" autocomplete="name"></div>
-              <div class="field"><label for="phone">연락처</label><input id="phone" placeholder="예: 010-0000-0000" autocomplete="tel"></div>
-              <div class="field"><label for="email">회신 이메일</label><input id="email" type="email" placeholder="예: sample@company.com" autocomplete="email"></div>
-              <div class="field"><label for="country">도착/출발 국가</label><input id="country" placeholder="예: 미국, 일본, 독일, 베트남"></div>
-              <div class="field"><label for="city">도착/출발 도시·우편번호</label><input id="city" placeholder="예: Los Angeles, CA 90001"></div>
-              <div class="field"><label for="cargoType">화물 유형</label><select id="cargoType"><option>서류</option><option selected>일반 샘플/소량화물</option><option>상업용 판매품</option><option>식품·화장품·액체류</option><option>배터리·전자제품</option><option>위험물/MSDS 확인 필요</option><option>기타 확인 필요 품목</option></select></div>
-              <div class="field"><label for="itemName">품명</label><input id="itemName" placeholder="예: 플라스틱 샘플, 전자부품"></div>
-              <div class="field"><label for="value">인보이스 금액</label><input id="value" placeholder="예: USD 100 / KRW 150,000"></div>
-              <div class="field"><label for="weight">실제중량 KG</label><input id="weight" type="number" min="0" step="0.1" placeholder="예: 3.5" inputmode="decimal"><small>포장 완료 후 박스 포함 중량</small></div>
-              <div class="field"><label for="boxes">박스 수량</label><input id="boxes" type="number" min="1" step="1" placeholder="예: 2" inputmode="numeric"></div>
-              <div class="field"><label for="readyDate">발송 희망일</label><input id="readyDate" type="date"></div>
-              <div class="field full"><label>박스 사이즈 CM</label><div class="inline"><input id="length" type="number" min="0" step="1" placeholder="가로"><input id="width" type="number" min="0" step="1" placeholder="세로"><input id="height" type="number" min="0" step="1" placeholder="높이"></div><small>박스가 여러 종류라면 문의 내용에 각각 기재해주세요.</small></div>
-              <div class="field full"><label for="memo">추가 문의 내용</label><textarea id="memo" rows="5" placeholder="예: DHL/FedEx/UPS 중 가능한 특송사 비교 희망, 수취인이 세금 납부 예정, 배터리 포함 여부 등"></textarea></div>
-            </div></form>
-            <div class="action-row"><button type="submit" form="quoteForm" class="btn primary" id="submitBtn">견적문의 접수하기</button><button type="button" class="btn dark" id="copyBtn">문의 내용 복사</button></div><div class="submit-status" id="submitStatus"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section soft" id="check"><div class="wrap"><div class="head reveal"><div><div class="kicker">Before Quote</div><h2>견적 전에 꼭 확인해야 할 항목</h2></div><p class="lead">특송은 빠르지만 품목 제한과 통관 조건에 따라 접수가 제한될 수 있습니다. 아래 품목은 상담 전 사진, 성분표, MSDS, 용도 설명을 준비하면 좋습니다.</p></div><div class="card-grid"><article class="card reveal"><span class="num">01</span><h3>배터리 · 전자제품</h3><p>리튬 배터리 포함 여부, 내장형/동봉형 여부, 용량, MSDS 또는 제품 스펙 확인이 필요할 수 있습니다.</p></article><article class="card reveal delay1"><span class="num">02</span><h3>식품 · 화장품 · 액체류</h3><p>국가별 수입 제한이 다릅니다. 성분, 용도, 수취인 자격, 현지 통관 가능성을 먼저 확인해야 합니다.</p></article><article class="card reveal delay2"><span class="num">03</span><h3>샘플 금액 · 해외특송 정보</h3><p>샘플이라도 0원 신고는 통관 문제가 될 수 있습니다. 실제 가치와 목적을 기준으로 작성하는 것이 안전합니다.</p></article></div></div></section>
-    <section class="section" id="compare"><div class="wrap"><div class="head reveal"><div><div class="kicker">Mode Selection</div><h2>특송이 항상 정답은 아닙니다</h2></div><p class="lead">중량이 커지거나 통관 조건이 복잡하면 항공화물, LCL, 일반 수입 통관이 더 합리적일 수 있습니다.</p></div><div class="compare"><div class="panel reveal"><table class="table"><thead><tr><th>구분</th><th>추천 상황</th><th>주의점</th></tr></thead><tbody><tr><td><b>해외특송</b></td><td>서류, 샘플, 긴급 소량 화물</td><td>부피중량·품목 제한·현지세금</td></tr><tr><td><b>항공화물</b></td><td>특송보다 큰 기업 화물</td><td>공항 통관·내륙운송 별도</td></tr><tr><td><b>LCL 해상</b></td><td>납기 여유, 비용 절감 우선</td><td>스케줄·도착지 비용 확인</td></tr></tbody></table></div><div class="panel reveal delay1"><h3>상담 시 알려주시면 빠릅니다</h3><div class="checklist"><div class="check"><i>1</i><div><b>품명 / 재질 / 용도</b><span>단순 제품명보다 구체적인 설명이 통관 검토에 유리합니다.</span></div></div><div class="check"><i>2</i><div><b>중량 / 박스 사이즈</b><span>특송은 실제중량보다 부피중량이 더 크게 나올 수 있습니다.</span></div></div><div class="check"><i>3</i><div><b>수취인 정보</b><span>도착국 수취인의 세금 납부와 통관 대응 가능 여부가 중요합니다.</span></div></div></div></div></div></div></section>
-  <section class="blog-section" id="blog">
-    <div class="container">
-      <div class="blog-head">
-        <div>
-          <div class="blog-badge">KBRIDGE EXPRESS BLOG</div>
-          <h2>블로그</h2>
-          <p>해외특송, 통관, 인보이스, 운임 계산, 실제 문의 사례 등<br>케이브릿지 해외특송과 관련된 글을 계속 업데이트합니다.</p>
-        </div>
-        <div class="blog-actions">
-          <a href="blog/index.html" class="blog-filter">블로그 전체보기</a>
-        </div>
-      </div>
-
-      <div class="blog-grid" id="latestBlogGrid" aria-live="polite">
-        <article class="blog-card">
-          <div class="blog-body">
-            <div class="blog-meta">불러오는 중</div>
-            <h3 class="blog-title">블로그 글을 불러오고 있습니다.</h3>
-            <p class="blog-excerpt">잠시만 기다려 주세요.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-    <section class="section dark" id="process"><div class="wrap"><div class="head reveal"><div><div class="kicker" style="color:#70dcf1">Process</div><h2>해외특송 진행 절차</h2></div><p class="lead">메일 문의 후 화물 정보가 확정되면 품목 검토, 실제 견적 안내, 픽업, 발송, 추적 순서로 진행합니다.</p></div><div class="process-grid"><article class="step reveal"><small>01</small><h3>견적 정보 접수</h3><p>국가, 품목, 중량, 사이즈, 해외특송 정보를 접수합니다.</p></article><article class="step reveal delay1"><small>02</small><h3>품목 가능 여부 검토</h3><p>배터리, 액체, 식품, 화장품, 위험물 여부를 확인합니다.</p></article><article class="step reveal delay2"><small>03</small><h3>실제 운임 안내</h3><p>특송사, 도착지, 할증, 통관 조건을 반영해 견적을 안내합니다.</p></article><article class="step reveal delay3"><small>04</small><h3>픽업 · 발송 · 추적</h3><p>운송장 발행 후 배송과 통관 진행 상황을 확인합니다.</p></article></div></div></section>
-    <section class="section dark" id="contact">
-      <div class="wrap">
-        <div class="cta reveal">
-          <div>
-            <div class="kicker" style="color:#70dcf1">Kakao Contact</div>
-            <h2>카카오톡으로 실시간 문의하세요.</h2>
-            <p>해외특송 가능 여부, 긴급 샘플 발송, 배터리·식품·화장품 등 사전 검토가 필요한 품목은 카카오톡으로 바로 문의해 주세요.</p>
-          </div>
-          <div class="hero-actions" style="margin:0">
-            <a class="btn primary" href="https://pf.kakao.com/_baLgb/chat" target="_blank" rel="noopener">카카오톡 실시간 문의</a>
-            <a class="btn ghost" href="#quote">견적문의 작성</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div class="success-modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle">
-    <div class="success-box">
-      <div class="success-icon">✓</div>
-      <h3 id="successTitle">문의가 접수되었습니다.</h3>
-      <p>케이브릿지 담당자가 내용을 확인한 뒤 회신드리겠습니다.<br>긴급 건은 카카오톡 실시간 문의를 함께 이용해 주세요.</p>
-      <button type="button" class="btn primary" id="successCloseBtn">확인</button>
-    </div>
-  </div>
-
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer-top">
-        <div>
-          <a class="footer-brand" href="#top"><img class="brand-icon" src="assets/kbridge-icon.png" alt="KBRIDGE 아이콘"><span class="brand-copy">KBRIDGE</span></a>
-          <p class="footer-desc">케이브릿지가 운영하는 해외특송 서비스</p>
-        </div>
-        <div class="footer-contact">
-          <div class="footer-contact-title">문의</div>
-          <a href="https://pf.kakao.com/_baLgb/chat" target="_blank" rel="noopener">실시간 문의</a>
-          <a href="mailto:all@kbridges.co.kr">all@kbridges.co.kr</a>
-        </div>
-      </div>
-      <div class="footer-divider"></div>
-      <div class="footer-bottom">
-        <div class="footer-company">
-          케이브릿지 주식회사 (KBRIDGE CO.,LTD) · 대표이사 김형진 · 사업자등록번호 548-88-02435<br>
-          본사 : 부산광역시 동구 조방로17 5층 501호<br>
-          <a id="privacyPolicyLink" class="policy-link" href="https://kbridges.co.kr/policy/private" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
-        </div>
-        <div class="footer-copy">© 2026 KBRIDGE CO.,LTD. All rights reserved.</div>
-      </div>
-    </div>
-  </footer>
-  <script>
+<header class="topbar" id="top">
+<div class="wrap">
+<nav class="nav">
+<a aria-label="KBRIDGE 메인으로 이동" class="logo" href="/"><img alt="KBridge 케이브릿지 주식회사" class="brand-icon" src="assets/kbridge-logo-official.png"/><span class="logo-text">KBRIDGE</span></a>
+<div class="menu"><a href="#quote">견적문의</a>
+<a href="#blog">블로그</a><a href="#check">문의 전 확인사항</a><a href="#compare">운송 방식 비교</a><a href="#process">진행 절차</a><a href="#contact">실시간 문의</a></div>
+<button aria-label="메뉴 열기" class="hamb" id="hamb"><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu"><a href="#quote">견적문의</a><a href="#blog">블로그</a><a href="#check">문의 전 확인사항</a><a href="#compare">운송 방식 비교</a><a href="#process">진행 절차</a><a href="#contact">실시간 문의</a></div>
+</div>
+</header>
+<main>
+<section class="hero">
+<div class="wrap hero-inner">
+<div class="hero-copy reveal show">
+<div class="eyebrow">KBRIDGE EXPRESS SERVICE</div>
+<h1>해외특송 견적문의<br/><span class="accent">빠르게 접수하세요</span></h1>
+<p>샘플 발송, 긴급 소량화물, 기업 수출입 특송까지 국가·품목·중량·박스 정보를 남겨주시면 케이브릿지가 특송 가능 여부와 실제 견적을 확인해 회신드립니다.</p>
+<div class="hero-actions"><a class="btn primary" href="#quote">견적문의 작성하기</a><a class="btn ghost" href="#check">문의 전 확인사항</a></div>
+</div>
+<div aria-label="해외특송 문의 안내 패널" class="express-panel reveal delay1">
+<div class="panel-title">
+<div>
+<h2>특송 견적은<br/>정보가 정확할수록 빠릅니다.</h2>
+<p>품목 제한, 부피중량, 도착국 통관 조건을 함께 확인해 실제 진행 가능한 견적을 안내합니다.</p>
+</div>
+<span class="panel-badge">EXPRESS QUOTE</span>
+</div>
+<div class="express-flow">
+<div class="flow-card"><small>01</small><b>문의 접수</b><span>국가·품목·중량 입력</span></div>
+<div class="flow-card"><small>02</small><b>가능 여부 검토</b><span>특송 제한 품목 확인</span></div>
+<div class="flow-card"><small>03</small><b>견적 회신</b><span>운송사·일정 안내</span></div>
+</div>
+<div class="panel-check">
+<h3>견적 문의 전 준비하면 좋은 정보</h3>
+<div class="check-row">
+<span>정확한 품명 / 재질 / 용도</span>
+<span>박스 포함 실제중량</span>
+<span>박스 가로·세로·높이</span>
+<span>인보이스 금액</span>
+<span>도착 국가 / 도시 / 우편번호</span>
+<span>배터리·액체·식품 포함 여부</span>
+</div>
+</div>
+<div class="panel-note">배터리, 액체류, 식품, 화장품, 위험물 가능성이 있는 품목은 사전 검토 후 접수가 가능합니다.</div>
+</div>
+</div>
+</section>
+<section class="section quote-section" id="quote">
+<div class="wrap">
+<div class="quote-shell reveal show">
+<div class="quote-head"><div><h2>해외특송 견적문의</h2><p>아래 정보를 입력한 뒤 ‘견적문의 접수하기’를 누르면 케이브릿지 담당자에게 접수됩니다.</p></div><span class="badge">견적문의 접수</span></div>
+<div class="quote-body">
+<form id="quoteForm"><div class="form-grid">
+<div class="field"><label for="company">회사명</label><input autocomplete="organization" id="company" placeholder="예: 케이브릿지"/></div>
+<div class="field"><label for="name">담당자명</label><input autocomplete="name" id="name" placeholder="예: 홍길동"/></div>
+<div class="field"><label for="phone">연락처</label><input autocomplete="tel" id="phone" placeholder="예: 010-0000-0000"/></div>
+<div class="field"><label for="email">회신 이메일</label><input autocomplete="email" id="email" placeholder="예: sample@company.com" type="email"/></div>
+<div class="field"><label for="country">도착/출발 국가</label><input id="country" placeholder="예: 미국, 일본, 독일, 베트남"/></div>
+<div class="field"><label for="city">도착/출발 도시·우편번호</label><input id="city" placeholder="예: Los Angeles, CA 90001"/></div>
+<div class="field"><label for="cargoType">화물 유형</label><select id="cargoType"><option>서류</option><option selected="">일반 샘플/소량화물</option><option>상업용 판매품</option><option>식품·화장품·액체류</option><option>배터리·전자제품</option><option>위험물/MSDS 확인 필요</option><option>기타 확인 필요 품목</option></select></div>
+<div class="field"><label for="itemName">품명</label><input id="itemName" placeholder="예: 플라스틱 샘플, 전자부품"/></div>
+<div class="field"><label for="value">인보이스 금액</label><input id="value" placeholder="예: USD 100 / KRW 150,000"/></div>
+<div class="field"><label for="weight">실제중량 KG</label><input id="weight" inputmode="decimal" min="0" placeholder="예: 3.5" step="0.1" type="number"/><small>포장 완료 후 박스 포함 중량</small></div>
+<div class="field"><label for="boxes">박스 수량</label><input id="boxes" inputmode="numeric" min="1" placeholder="예: 2" step="1" type="number"/></div>
+<div class="field"><label for="readyDate">발송 희망일</label><input id="readyDate" type="date"/></div>
+<div class="field full"><label>박스 사이즈 CM</label><div class="inline"><input id="length" min="0" placeholder="가로" step="1" type="number"/><input id="width" min="0" placeholder="세로" step="1" type="number"/><input id="height" min="0" placeholder="높이" step="1" type="number"/></div><small>박스가 여러 종류라면 문의 내용에 각각 기재해주세요.</small></div>
+<div class="field full"><label for="memo">추가 문의 내용</label><textarea id="memo" placeholder="예: DHL/FedEx/UPS 중 가능한 특송사 비교 희망, 수취인이 세금 납부 예정, 배터리 포함 여부 등" rows="5"></textarea></div>
+</div></form>
+<div class="action-row"><button class="btn primary" form="quoteForm" id="submitBtn" type="submit">견적문의 접수하기</button><button class="btn dark" id="copyBtn" type="button">문의 내용 복사</button></div><div class="submit-status" id="submitStatus"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="section soft" id="check"><div class="wrap"><div class="head reveal"><div><div class="kicker">Before Quote</div><h2>견적 전에 꼭 확인해야 할 항목</h2></div><p class="lead">특송은 빠르지만 품목 제한과 통관 조건에 따라 접수가 제한될 수 있습니다. 아래 품목은 상담 전 사진, 성분표, MSDS, 용도 설명을 준비하면 좋습니다.</p></div><div class="card-grid"><article class="card reveal"><span class="num">01</span><h3>배터리 · 전자제품</h3><p>리튬 배터리 포함 여부, 내장형/동봉형 여부, 용량, MSDS 또는 제품 스펙 확인이 필요할 수 있습니다.</p></article><article class="card reveal delay1"><span class="num">02</span><h3>식품 · 화장품 · 액체류</h3><p>국가별 수입 제한이 다릅니다. 성분, 용도, 수취인 자격, 현지 통관 가능성을 먼저 확인해야 합니다.</p></article><article class="card reveal delay2"><span class="num">03</span><h3>샘플 금액 · 인보이스</h3><p>샘플이라도 0원 신고는 통관 문제가 될 수 있습니다. 실제 가치와 목적을 기준으로 작성하는 것이 안전합니다.</p></article></div></div></section>
+<section class="section" id="compare"><div class="wrap"><div class="head reveal"><div><div class="kicker">Mode Selection</div><h2>특송이 항상 정답은 아닙니다</h2></div><p class="lead">중량이 커지거나 통관 조건이 복잡하면 항공화물, LCL, 일반 수입 통관이 더 합리적일 수 있습니다.</p></div><div class="compare"><div class="panel reveal"><table class="table"><thead><tr><th>구분</th><th>추천 상황</th><th>주의점</th></tr></thead><tbody><tr><td><b>해외특송</b></td><td>서류, 샘플, 긴급 소량 화물</td><td>부피중량·품목 제한·현지세금</td></tr><tr><td><b>항공화물</b></td><td>특송보다 큰 기업 화물</td><td>공항 통관·내륙운송 별도</td></tr><tr><td><b>LCL 해상</b></td><td>납기 여유, 비용 절감 우선</td><td>스케줄·도착지 비용 확인</td></tr></tbody></table></div><div class="panel reveal delay1"><h3>상담 시 알려주시면 빠릅니다</h3><div class="checklist"><div class="check"><i>1</i><div><b>품명 / 재질 / 용도</b><span>단순 제품명보다 구체적인 설명이 통관 검토에 유리합니다.</span></div></div><div class="check"><i>2</i><div><b>중량 / 박스 사이즈</b><span>특송은 실제중량보다 부피중량이 더 크게 나올 수 있습니다.</span></div></div><div class="check"><i>3</i><div><b>수취인 정보</b><span>도착국 수취인의 세금 납부와 통관 대응 가능 여부가 중요합니다.</span></div></div></div></div></div></div></section>
+<section class="blog-section" id="blog">
+<div class="container">
+<div class="blog-head">
+<div>
+<div class="blog-badge">KBRIDGE EXPRESS BLOG</div>
+<h2>블로그</h2>
+<p>해외특송, 통관, 인보이스, 운임 계산, 실제 문의 사례 등<br/>케이브릿지 해외특송과 관련된 글을 계속 업데이트합니다.</p>
+</div>
+<div class="blog-actions">
+<a class="blog-filter" href="blog/index.html">전체 보기</a>
+</div>
+</div>
+<div aria-live="polite" class="blog-grid" id="latestBlogGrid">
+<article class="blog-card">
+<a class="blog-thumb" href="blog/overseas-express-checklist.html" aria-label="해외특송, 보내기 전에 꼭 확인해야 할 것">
+<img src="blog/images/thumbnail-express-logistics-square.webp" alt="케이브릿지 해외특송 보내기 전 체크리스트 정사각형 썸네일" loading="lazy"/>
+</a>
+<div class="blog-body">
+<div class="blog-meta">2026.06.17 · 해외특송 정보</div>
+<h3 class="blog-title">해외특송, 보내기 전에 꼭 확인해야 할 것</h3>
+<p class="blog-excerpt">품목 가능 여부, 인보이스 작성, 통관 지연, 관부가세와 배송사 선택 기준을 실무 중심으로 정리했습니다.</p>
+<a class="blog-read" href="blog/overseas-express-checklist.html">자세히 보기</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="section dark" id="process"><div class="wrap"><div class="head reveal"><div><div class="kicker" style="color:#70dcf1">Process</div><h2>해외특송 진행 절차</h2></div><p class="lead">메일 문의 후 화물 정보가 확정되면 품목 검토, 실제 견적 안내, 픽업, 발송, 추적 순서로 진행합니다.</p></div><div class="process-grid"><article class="step reveal"><small>01</small><h3>견적 정보 접수</h3><p>국가, 품목, 중량, 사이즈, 발송 목적과 화물 정보를 메일로 접수합니다.</p></article><article class="step reveal delay1"><small>02</small><h3>품목 가능 여부 검토</h3><p>배터리, 액체, 식품, 화장품, 위험물 여부를 확인합니다.</p></article><article class="step reveal delay2"><small>03</small><h3>실제 운임 안내</h3><p>특송사, 도착지, 할증, 통관 조건을 반영해 견적을 안내합니다.</p></article><article class="step reveal delay3"><small>04</small><h3>픽업 · 발송 · 추적</h3><p>운송장 발행 후 배송과 통관 진행 상황을 확인합니다.</p></article></div></div></section>
+<section class="section dark" id="contact">
+<div class="wrap">
+<div class="cta reveal">
+<div>
+<div class="kicker" style="color:#70dcf1">Kakao Contact</div>
+<h2>카카오톡으로 실시간 문의하세요.</h2>
+<p>해외특송 가능 여부, 긴급 샘플 발송, 배터리·식품·화장품 등 사전 검토가 필요한 품목은 카카오톡으로 바로 문의해 주세요.</p>
+</div>
+<div class="hero-actions" style="margin:0">
+<a class="btn primary" href="https://pf.kakao.com/_baLgb/chat" rel="noopener" target="_blank">카카오톡 실시간 문의</a>
+<a class="btn ghost" href="#quote">견적문의 작성</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div aria-labelledby="successTitle" aria-modal="true" class="success-modal" id="successModal" role="dialog">
+<div class="success-box">
+<div class="success-icon">✓</div>
+<h3 id="successTitle">문의가 접수되었습니다.</h3>
+<p>케이브릿지 담당자가 내용을 확인한 뒤 회신드리겠습니다.<br/>긴급 건은 카카오톡 실시간 문의를 함께 이용해 주세요.</p>
+<button class="btn primary" id="successCloseBtn" type="button">확인</button>
+</div>
+</div>
+<div aria-label="빠른 문의 및 상단 이동" class="floating-actions">
+<a aria-label="이메일 문의하기" class="float-contact email" href="mailto:all@kbridges.co.kr">✉ 이메일 문의</a>
+<a aria-label="카카오톡 문의하기" class="float-contact kakao" href="https://pf.kakao.com/_baLgb/chat" rel="noopener" target="_blank">💬 카카오톡 문의</a>
+<button aria-label="페이지 맨 위로 이동" class="top-btn" id="topBtn" type="button">Top</button>
+</div>
+<footer class="footer">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<a class="footer-brand" href="#top"><img alt="KBridge 케이브릿지 주식회사" class="brand-icon" src="assets/kbridge-logo-official.png"/><span class="brand-copy">KBRIDGE</span></a>
+<p class="footer-desc">케이브릿지가 운영하는 해외특송 서비스</p>
+</div>
+<div class="footer-contact">
+<div class="footer-contact-title">문의</div>
+<a href="https://pf.kakao.com/_baLgb/chat" rel="noopener" target="_blank">실시간 문의</a>
+<a href="mailto:all@kbridges.co.kr">all@kbridges.co.kr</a>
+</div>
+</div>
+<div class="footer-divider"></div>
+<div class="footer-bottom">
+<div class="footer-company">
+          케이브릿지 주식회사 (KBRIDGE CO.,LTD) · 대표이사 김형진 · 사업자등록번호 548-88-02435<br/>
+          본사 : 부산광역시 동구 조방로17 5층 501호<br/>
+<a class="policy-link" href="https://kbridges.co.kr/policy/private" id="privacyPolicyLink" rel="noopener noreferrer" target="_blank">개인정보처리방침</a>
+</div>
+<div class="footer-copy">© 2026 KBRIDGE CO.,LTD. All rights reserved.</div>
+</div>
+</div>
+</footer>
+<script>
     // Google Apps Script 배포 후 받은 웹 앱 URL을 아래에 넣어주세요.
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxitxJNBjDOLqFAkZ1GJsOUiN_dCnUvruYDXdCmUriCdo96DbuO01VOIC3OqoFntd4s/exec';
 
@@ -425,59 +644,63 @@
     function val(id){ return (el(id)?.value || '').trim() || '-'; }
 
 
-    async function loadLatestBlogPosts(){
-      const grid = document.getElementById('latestBlogGrid');
-      if(!grid) return;
+    
+function loadLatestBlogPosts(){
+  const grid = document.getElementById('latestBlogGrid');
+  if(!grid) return;
 
-      const fallbackPosts = [
-          {
-                    "title": "해외특송, 보내기 전에 꼭 확인해야 할 것",
-                    "excerpt": "품목 가능 여부, 인보이스 작성, 수취인 정보, 관부가세와 통관 지연까지 해외특송 발송 전 확인해야 할 실무 포인트를 정리했습니다.",
-                    "url": "blog/overseas-express-checklist.html",
-                    "thumbnail": "blog/images/thumbnail-express-logistics-square.webp",
-                    "date": "2026.06.09",
-                    "category": "해외특송 정보",
-                    "alt": "케이브릿지 해외특송 물류정보 썸네일"
-          }
-];
+  const fallbackPosts = [{
+    title: '해외특송, 보내기 전에 꼭 확인해야 할 것',
+    excerpt: '품목 가능 여부, 인보이스 작성, 통관 지연, 관부가세와 배송사 선택 기준을 실무 중심으로 정리했습니다.',
+    url: 'blog/overseas-express-checklist.html',
+    thumbnail: 'blog/images/thumbnail-express-logistics-square.webp',
+    date: '2026.06.17',
+    category: '해외특송 정보',
+    alt: '케이브릿지 해외특송 보내기 전 체크리스트 정사각형 썸네일'
+  }];
 
-      function escapeHtml(value){
-        return String(value || '').replace(/[&<>"]/g, function(ch){
-          return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch];
-        });
-      }
+  function escapeHtml(value){
+    return String(value || '').replace(/[&<>"']/g, function(ch){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch];
+    });
+  }
+  function rootPath(path){
+    const value = String(path || '').trim();
+    if(!value) return '#';
+    if(/^(https?:)?\/\//.test(value) || value.startsWith('blog/')) return value;
+    return 'blog/' + value.replace(/^\.\//, '').replace(/^\//, '');
+  }
+  function render(posts){
+    const list = Array.isArray(posts) && posts.length ? posts : fallbackPosts;
+    grid.innerHTML = list.slice(0, 2).map(post => {
+      const url = rootPath(post.url);
+      const thumb = rootPath(post.thumbnail);
+      return `
+        <article class="blog-card">
+          <a class="blog-thumb" href="${escapeHtml(url)}" aria-label="${escapeHtml(post.title)}">
+            <img src="${escapeHtml(thumb)}" alt="${escapeHtml(post.alt || post.title)}" loading="lazy">
+          </a>
+          <div class="blog-body">
+            <div class="blog-meta">${escapeHtml(post.date)} · ${escapeHtml(post.category || '해외특송 정보')}</div>
+            <h3 class="blog-title">${escapeHtml(post.title)}</h3>
+            <p class="blog-excerpt">${escapeHtml(post.excerpt)}</p>
+            <a class="blog-read" href="${escapeHtml(url)}">자세히 보기</a>
+          </div>
+        </article>`;
+    }).join('');
+  }
 
-      function render(posts){
-        const latest = (posts || []).slice(0, 3);
-        if(!latest.length){
-          grid.innerHTML = '<article class="blog-card"><div class="blog-body"><h3 class="blog-title">등록된 블로그 글이 없습니다.</h3></div></article>';
-          return;
-        }
-        grid.innerHTML = latest.map(post => `
-          <article class="blog-card">
-            <a class="blog-thumb" href="${escapeHtml(post.url)}" aria-label="${escapeHtml(post.title)}">
-              <img src="${escapeHtml(post.thumbnail)}" alt="${escapeHtml(post.alt || post.title)}" loading="lazy">
-            </a>
-            <div class="blog-body">
-              <div class="blog-meta">${escapeHtml(post.date)} · ${escapeHtml(post.category || '해외특송 정보')}</div>
-              <h3 class="blog-title">${escapeHtml(post.title)}</h3>
-              <p class="blog-excerpt">${escapeHtml(post.excerpt)}</p>
-              <a class="blog-read" href="${escapeHtml(post.url)}">자세히 보기</a>
-            </div>
-          </article>
-        `).join('');
-      }
+  fetch('blog/posts.json', {cache:'no-store'})
+    .then(response => {
+      if(!response.ok) throw new Error('posts.json load failed');
+      return response.json();
+    })
+    .then(render)
+    .catch(() => render(fallbackPosts));
+}
 
-      try{
-        const response = await fetch('blog/posts.json', {cache:'no-store'});
-        if(!response.ok) throw new Error('posts.json load failed');
-        render(await response.json());
-      }catch(error){
-        render(fallbackPosts);
-      }
-    }
+loadLatestBlogPosts();
 
-    loadLatestBlogPosts();
 
     function makeBody(){
       return `[케이브릿지 해외특송 견적문의]\n\n`+
@@ -622,6 +845,17 @@
       event.preventDefault();
       window.open('https://kbridges.co.kr/policy/private', '_blank', 'noopener,noreferrer');
     });
+    const topBtn = document.getElementById('topBtn');
+    const toggleTopBtn = () => {
+      if (!topBtn) return;
+      topBtn.classList.toggle('show', window.scrollY > 320);
+    };
+    window.addEventListener('scroll', toggleTopBtn, { passive: true });
+    toggleTopBtn();
+    topBtn?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
 </script>
 </body>
 </html>
